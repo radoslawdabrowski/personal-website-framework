@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # libs
-    'djongo.models.sh'
 
     # modules
     # 'root',
