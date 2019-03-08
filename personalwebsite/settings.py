@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # libs
+    'djongo.models.sh'
 
     # modules
     # 'root',
@@ -85,6 +86,22 @@ WSGI_APPLICATION = 'personalwebsite.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'website',
+        # 'ENFORCE_SCHEMA': True,
+        # 'HOST': 'host-name or ip address',
+        # 'PORT': 27017,
+        # 'USER': 'db-username',
+        # 'PASSWORD': 'password',
+        # 'AUTH_SOURCE': 'db-name',
+        # 'AUTH_MECHANISM': 'SCRAM-SHA-1',
+        # 'REPLICASET': 'replicaset',
+        # 'SSL': 'ssl',
+        # 'SSL_CERTFILE': 'ssl_certfile',
+        # 'SSL_CA_CERTS': 'ssl_ca_certs',
+        # 'READ_PREFERENCE': 'read_preference'
+    },
+    'local-db': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
