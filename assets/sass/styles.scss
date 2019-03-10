@@ -1,8 +1,14 @@
-// bootstrap
-@import "../libs/bootstrap-4.3.1/scss/bootstrap";
-
 // font-awesome
 @import "../libs/fontawesome-pro-5.7.2-web/scss/fontawesome";
 @import "../libs/fontawesome-pro-5.7.2-web/scss/solid";
 
+// materialize
+@import "../libs/theme-1.0.1/multipage/assets/css/materialize.min";
+@import "../libs/theme-1.0.1/multipage/assets/css/animate";
+
+// theme
+@import "../libs/theme-1.0.1/multipage/assets/css/responsive";
+@import "../libs/theme-1.0.1/multipage/assets/css/style";
+
+@import "font";
 @import "main";
