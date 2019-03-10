@@ -1,17 +1,48 @@
+{% load static from staticfiles %}
+{% load root_extras %}
+{% get_title as title %}
+{% get_description as description %}
+{% get_keywords as keywords %}
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    {%  load static from staticfiles %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <meta name="Description" content="{{ description }}">
+    <meta name="Keywords" content="{{ keywords }}">
 
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
-    Hello World
+<div class="container">
+    <div class="row">
+        <!--
+        =========================================
+                       SIDEBAR
+        ==========================================
+        -->
+        {% sidebar %}
 
-    <i class="fas fa-2x fa-calculator"></i>
+        <!--
+        =========================================
+                       CONTENT
+        ==========================================
+        -->
+        <section class="col s12 m12 l8 section">
+            <div class="row">
+                {% block content %}{{ work_in_progress }}{% endblock %}
 
-    <script src="{% static 'scripts.js' %}"></script>
+                <!--
+                =========================================
+                               FOOTER
+                ==========================================
+                -->
+                {% footer %}
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="{% static 'scripts.js' %}"></script>
 </body>
 </html>
