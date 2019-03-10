@@ -1,6 +1,6 @@
-from django.shortcuts import render
+def sidebar_view_context():
+    return {}
 
 
-# Create your views here.
-def index_view(request, *args, **kwargs):
-    return render(request, 'index.html', {})
+def footer_view_context():
+    return {}
