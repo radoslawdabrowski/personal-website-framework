@@ -3,12 +3,12 @@
 @import "../libs/fontawesome-pro-5.7.2-web/scss/solid";
 
 // materialize
-@import "../libs/theme-1.0.1/multipage/assets/css/materialize.min";
-@import "../libs/theme-1.0.1/multipage/assets/css/animate";
+@import "../libs/materialize-1.0.0/sass/materialize";
+@import "../libs/animate.scss-3.2.2/animate";
 
 // theme
-@import "../libs/theme-1.0.1/multipage/assets/css/responsive";
-@import "../libs/theme-1.0.1/multipage/assets/css/style";
+@import "../libs/theme-1.0.1/sass/responsive";
+@import "../libs/theme-1.0.1/sass/style";
 
 @import "font";
 @import "main";
