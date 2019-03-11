@@ -40,7 +40,11 @@ INSTALLED_APPS = [
 
     # modules
     'root',
-    'cv'
+    'cv',
+    'cover_letter',
+    'blog',
+    'portfolio'
+    'contact'
 ]
 
 MIDDLEWARE = [
