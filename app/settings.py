@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'cv',
     'cover_letter',
     'blog',
-    'portfolio'
+    'portfolio',
     'contact'
 ]
 
