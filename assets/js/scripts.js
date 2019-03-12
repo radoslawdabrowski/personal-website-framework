@@ -1,17 +1,15 @@
 // jQuery
 // @prepros-prepend "../libs/jquery-3.3.1/jquery.min.js"
 // @prepros-prepend "../libs/jquery-3.3.1/jquery.mixitup.min.js"
-
-//WOW
-// @prepros-prepend "../libs/scroll-reveal-3.1.4/reveall.min.js"
+// @prepros-prepend "../libs/jquery-3.3.1/jquery.touchSwipe.min.js"
 
 // Materialize
-// @prepros-prepend "../libs/materialize-1.0.0/js/bin/materialize.min.js"
+// @prepros-prepend "../libs/materialize-0.97.5/materialize.min.js"
 
-// Theme
-// @prepros-prepend "../libs/theme-1.0.1/js/masonry.pkgd.js"
-// @prepros-prepend "../libs/theme-1.0.1/js/validator.min.js"
-// @prepros-prepend "../libs/theme-1.0.1/js/init.js"
+//WOW
+// "../libs/scroll-reveal-3.1.4/markerwithlabel.min.js"
+// @prepros-prepend "../libs/scroll-reveal-3.1.4/retina.min.js"
+// @prepros-prepend "../libs/scroll-reveal-3.1.4/reveall.min.js"
 
 // Custom
 // @prepros-prepend "_main.js"
