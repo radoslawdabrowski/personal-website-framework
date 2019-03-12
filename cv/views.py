@@ -17,5 +17,13 @@ def experience_view_context():
     return {}
 
 
-def intertests_view_context():
+def interests_view_context():
+    return {}
+
+
+def about_view_context():
+    return {}
+
+
+def skills_view_context():
     return {}
