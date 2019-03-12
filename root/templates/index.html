@@ -1,48 +1,70 @@
 {% load static from staticfiles %}
 {% load root_extras %}
-{% get_title as title %}
-{% get_description as description %}
-{% get_keywords as keywords %}
+{% load contact_extras %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    {% get_title as title %}
     <title>{% block title %}{{ title }}{% endblock %}</title>
+    {% get_description as description %}
     <meta name="Description" content="{{ description }}">
+    {% get_keywords as keywords %}
     <meta name="Keywords" content="{{ keywords }}">
-
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <!--
-        =========================================
-                       SIDEBAR
-        ==========================================
-        -->
-        {% sidebar %}
 
-        <!--
-        =========================================
-                       CONTENT
-        ==========================================
-        -->
-        <section class="col s12 m12 l8 section">
-            <div class="row">
-                {% block content %}{{ work_in_progress }}{% endblock %}
+<!--
+===========================================
+===========================================
+-->
 
-                <!--
-                =========================================
-                               FOOTER
-                ==========================================
-                -->
-                {% footer %}
-            </div>
-        </section>
-    </div>
-</div>
+<!--
+===========================================
+                LOADING
+===========================================
+-->
+{% loading %}
 
-<script src="{% static 'scripts.js' %}"></script>
+<header id="home">
+    <!--
+    ===========================================
+                    SIDEBAAR
+    ===========================================
+    -->
+    {% sidebar %}
+
+    <!--
+    ===========================================
+                    HEADER
+    ===========================================
+    -->
+    {% header %}
+</header>
+
+{% trans 'English' %}
+
+{% get_no_content as no_content %}
+{% block content %}
+    {{ no_content }}
+{% endblock %}
+
+<!--
+===========================================
+                CONTACT
+===========================================
+-->
+{% contact %}
+
+<!--
+===========================================
+                FOOTER
+===========================================
+-->
+{% footer %}
+
+<script src="{% static 'js/scripts.js' %}"></script>
 </body>
 </html>

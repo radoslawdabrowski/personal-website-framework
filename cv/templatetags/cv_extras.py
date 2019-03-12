@@ -1,6 +1,6 @@
 from django import template
 
-from cv.views import intertests_view_context, education_view_context, experience_view_context
+from cv.views import interests_view_context, education_view_context, experience_view_context, about_view_context, skills_view_context
 
 register = template.Library()
 
@@ -16,5 +16,15 @@ def experience():
 
 
 @register.inclusion_tag('components/intertests.html')
-def intertests():
-    return intertests_view_context()
+def interests():
+    return interests_view_context()
+
+
+@register.inclusion_tag('components/about.html')
+def about():
+    return about_view_context()
+
+
+@register.inclusion_tag('components/skills.html')
+def skills():
+    return skills_view_context()

@@ -1,9 +1,15 @@
-// @prepros-prepend "../libs/theme-1.0.1/multipage/assets/js/jquery.min.js"
-// @prepros-prepend "../libs/theme-1.0.1/multipage/assets/js/jquery.mixitup.min.js"
-// @prepros-prepend "../libs/theme-1.0.1/multipage/assets/js/materialize.min.js"
-// @prepros-prepend "../libs/theme-1.0.1/multipage/assets/js/wow.min.js"
-// @prepros-prepend "../libs/theme-1.0.1/multipage/assets/js/masonry.pkgd.js"
-// @prepros-prepend "../libs/theme-1.0.1/multipage/assets/js/validator.min.js"
+// jQuery
+// @prepros-prepend "../libs/jquery-3.3.1/jquery.min.js"
+// @prepros-prepend "../libs/jquery-3.3.1/jquery.mixitup.min.js"
+// @prepros-prepend "../libs/jquery-3.3.1/jquery.touchSwipe.min.js"
 
-// @prepros-prepend "../libs/theme-1.0.1/multipage/assets/js/init.js"
+// Materialize
+// @prepros-prepend "../libs/materialize-0.97.5/materialize.min.js"
+
+//WOW
+// "../libs/scroll-reveal-3.1.4/markerwithlabel.min.js"
+// @prepros-prepend "../libs/scroll-reveal-3.1.4/retina.min.js"
+// @prepros-prepend "../libs/scroll-reveal-3.1.4/reveall.min.js"
+
+// Custom
 // @prepros-prepend "_main.js"
