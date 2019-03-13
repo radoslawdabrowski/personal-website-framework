@@ -1,3 +1,5 @@
+{% load root_extras %}
+{% load i18n %}
 <div id="loading">
     <div id="loading-center">
         <div id="loading-center-absolute">
@@ -5,8 +7,10 @@
                 <span class="load-box"><span class="box-inner"></span></span>
             </div>
             <div class="text-holder text-center">
-                <h2>RADOSŁAW DĄBROWSKI</h2>
-                <h6>Projektant & Programista Java</h6>
+                {% get_name as name %}
+                <h2>{{ name }}</h2>
+                {% get_position as position %}
+                <h6>{{ position }}</h6>
             </div>
         </div>
     </div>

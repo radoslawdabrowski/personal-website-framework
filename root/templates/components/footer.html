@@ -1,3 +1,4 @@
+{% load root_extras %}
 {% load i18n %}
 <div id="scroll-top">
     <div id="scrollup"><i class="fa fa-angle-up"></i></div>
@@ -8,7 +9,8 @@
         <p class="text-center">
             © {% trans 'All right reserved' %}
             <a href="https://radoslawdabrowski.pl">
-                <strong>radoslawdabrowski.pl</strong>
+                {% get_website as website %}
+                <strong>{{ website }}</strong>
             </a>
         </p>
     </div>

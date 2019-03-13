@@ -1,3 +1,4 @@
+{% load root_extras %}
 <div class="header-background section">
     <div id="v-card-holder">
         <div class="container">
@@ -10,42 +11,37 @@
                         </div>
                         <div class="card-content">
                             <div class="info-headings">
-                                <h4 class="text-uppercase left">Radosław Dąbrowski</h4>
-                                <h6 class="text-capitalize left">Projektant & Programista Java</h6>
+                                {% get_name as name %}
+                                <h4 class="text-uppercase left">{{ name }}</h4>
+                                {% get_position as position %}
+                                <h6 class="text-capitalize left">{{ position }}</h6>
                             </div>
                             <div class="infos">
                                 <ul class="profile-list">
                                     <li class="clearfix">
                                         <span class="title"><i class="material-icons">email</i></span>
-                                        <span class="content">kontakt@radoslawdabrowski.pl</span>
+                                        {% get_email as email %}
+                                        <span class="content">{{ email }}</span>
                                     </li>
                                     <li class="clearfix">
                                         <span class="title"><i class="material-icons">language</i></span>
-                                        <span class="content">radoslawdabrowski.pl</span>
+                                        {% get_website as webiste %}
+                                        <span class="content">{{ webiste }}</span>
                                     </li>
                                     <li class="clearfix">
                                         <span class="title"><i class="material-icons">phone</i></span>
-                                        <span class="content">+48 508 630 984</span>
+                                        {% get_phone as phone %}
+                                        <span class="content">{{ phone }}</span>
                                     </li>
                                 </ul>
                             </div>
                             <div class="links">
-                                <a href="https://www.linkedin.com/in/dabrowskiradoslaw" target="_blank"
-                                   class="social  btn-floating blue darken-3">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                                <a href="https://github.com/radoslawdabrowski" target="_blank"
-                                   class="social  btn-floating grey darken-3">
-                                    <i class="fa fa-github"></i>
-                                </a>
-                                <a href="https://stackoverflow.com/users/4693532/humblehunter" target="_blank"
-                                   class="social btn-floating orange darken-2">
-                                    <i class="fa fa-stack-overflow"></i>
-                                </a>
-                                <a href="https://codeboards.io/profiles/93526" target="_blank"
-                                   class="social btn-floating red darken-2">
-                                    <i class="fa fa-codiepie"></i>
-                                </a>
+                                {% get_social as socialList %}
+                                {% for social in socialList %}
+                                    <a href="{{ social.url }}" target="_blank" class="social btn-floating {{ social.color }}">
+                                        <i class="fab {{ social.icon }}"></i>
+                                    </a>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
