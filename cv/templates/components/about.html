@@ -1,3 +1,4 @@
+{% load i18n %}
 <div id="about" class="section">
     <div class="container">
         <div class="row">
@@ -14,8 +15,8 @@
                     </div>
                     <div id="about-btn" class="card-action">
                         <div class="about-btn">
-                            <a href="cv/resume.pdf" target="_blank" class="btn waves-effect">Pobierz CV</a>
-                            <a href="#contact" class="btn waves-effect">Kontakt</a>
+                            <a href="cv/resume.pdf" target="_blank" class="btn waves-effect">{% trans 'get my resume' %}</a>
+                            <a href="#contact" class="btn waves-effect">{% trans 'Contact' %}</a>
                         </div>
                     </div>
                 </div>

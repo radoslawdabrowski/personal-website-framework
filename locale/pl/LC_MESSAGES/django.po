@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-13 11:44+0100\n"
+"POT-Creation-Date: 2019-03-13 16:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,7 +35,17 @@ msgstr "Niemiecki"
 msgid "French"
 msgstr "Francuski"
 
-#: .\root\templates\components\footer.html:9
+#: .\cv\templates\components\about.html:18
+msgid "get my resume"
+msgstr "Pobierz CV"
+
+#: .\cv\templates\components\about.html:19
+#, fuzzy
+#| msgid "Contact"
+msgid "contact"
+msgstr "Kontakt"
+
+#: .\root\templates\components\footer.html:10
 msgid "All right reserved"
 msgstr "Wszelkie prawa zastrzeżone"
 
@@ -70,6 +80,10 @@ msgstr "Kontakt"
 #: .\root\templatetags\root_extras.py:46
 msgid "Comming back soon"
 msgstr "Wkrótce wracamy"
+
+#: .\root\templatetags\root_extras.py:51
+msgid "Java Developer"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"
