@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-12 12:44+0100\n"
+"POT-Creation-Date: 2019-03-13 16:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%"
 "10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: .\app\settings.py:116 .\root\templates\index.html:47
+#: .\app\settings.py:116
 msgid "English"
 msgstr "Angielski"
 
@@ -35,9 +35,55 @@ msgstr "Niemiecki"
 msgid "French"
 msgstr "Francuski"
 
+#: .\cv\templates\components\about.html:18
+msgid "get my resume"
+msgstr "Pobierz CV"
+
+#: .\cv\templates\components\about.html:19
+#, fuzzy
+#| msgid "Contact"
+msgid "contact"
+msgstr "Kontakt"
+
+#: .\root\templates\components\footer.html:10
+msgid "All right reserved"
+msgstr "Wszelkie prawa zastrzeżone"
+
+#: .\root\templates\components\sidebar.html:5
+msgid "Homepage"
+msgstr "Strona główna"
+
+#: .\root\templates\components\sidebar.html:6
+msgid "About"
+msgstr "O Mnie"
+
+#: .\root\templates\components\sidebar.html:7
+msgid "Education"
+msgstr "Edukacja"
+
+#: .\root\templates\components\sidebar.html:8
+msgid "Skills"
+msgstr "Umiejętności"
+
+#: .\root\templates\components\sidebar.html:9
+msgid "Experience"
+msgstr "Doświadczenie"
+
+#: .\root\templates\components\sidebar.html:10
+msgid "Interest"
+msgstr "Zainteresowania"
+
+#: .\root\templates\components\sidebar.html:11
+msgid "Contact"
+msgstr "Kontakt"
+
 #: .\root\templatetags\root_extras.py:46
 msgid "Comming back soon"
 msgstr "Wkrótce wracamy"
+
+#: .\root\templatetags\root_extras.py:51
+msgid "Java Developer"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"
@@ -1216,3 +1262,6 @@ msgstr ""
 #: .\venv\Lib\site-packages\djongo\models\fields.py:633
 msgid "ObjectId"
 msgstr ""
+
+#~ msgid "Hobbies"
+#~ msgstr "Zainteresowania"

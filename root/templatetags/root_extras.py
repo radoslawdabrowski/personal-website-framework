@@ -27,8 +27,8 @@ def header():
 
 
 @register.simple_tag
-def get_title():
-    return 'Radek Dąbrowski'
+def get_website_title():
+    return 'Radosław Dąbrowski'
 
 
 @register.simple_tag
@@ -44,3 +44,56 @@ def get_keywords():
 @register.simple_tag
 def get_no_content():
     return _('Comming back soon')
+
+
+@register.simple_tag
+def get_position():
+    return _('Java Developer')
+
+
+@register.simple_tag
+def get_name():
+    return 'Radosław Dąbrowski'
+
+
+@register.simple_tag
+def get_email():
+    return 'kontakt@radoslawdabrowski.pl'
+
+
+@register.simple_tag
+def get_phone():
+    return '+48 508 630 984'
+
+
+@register.simple_tag
+def get_website():
+    return 'radoslawdabrowski.pl'
+
+
+@register.simple_tag
+def get_social():
+    # todo database gather informatins
+    return [
+        {
+            'icon': 'fa-linkedin-in',
+            'url': 'https://www.linkedin.com/in/dabrowskiradoslaw',
+            'color': 'blue darken-3'
+        },
+        {
+            'icon': 'fa-github',
+            'url': 'https://github.com/radoslawdabrowski',
+            'color': 'grey darken-3'
+        },
+        {
+            'icon': 'fa-stack-overflow',
+            'url': 'https://stackoverflow.com/users/4693532/humblehunter',
+            'color': 'orange darken-2'
+        },
+        {
+            'icon': 'fa-codiepie',
+            'url': 'https://codeboards.io/profiles/93526',
+            'color': 'red darken-2'
+        }
+    ]
+
