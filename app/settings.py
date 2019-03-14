@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 
     # modules
     'root',
+    'attributes',
     'cv',
     'cover_letter',
     'blog',
