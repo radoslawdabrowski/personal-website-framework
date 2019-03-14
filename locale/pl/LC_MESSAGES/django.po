@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-13 16:02+0100\n"
+"POT-Creation-Date: 2019-03-14 14:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,10 +40,18 @@ msgid "get my resume"
 msgstr "Pobierz CV"
 
 #: .\cv\templates\components\about.html:19
-#, fuzzy
-#| msgid "Contact"
-msgid "contact"
+#: .\root\templates\components\sidebar.html:11
+msgid "Contact"
 msgstr "Kontakt"
+
+#: .\cv\templates\components\education.html:6
+#: .\root\templates\components\sidebar.html:7
+msgid "Education"
+msgstr "Edukacja"
+
+#: .\cv\templates\components\education.html:21
+msgid "Now"
+msgstr "Obecnie"
 
 #: .\root\templates\components\footer.html:10
 msgid "All right reserved"
@@ -57,10 +65,6 @@ msgstr "Strona główna"
 msgid "About"
 msgstr "O Mnie"
 
-#: .\root\templates\components\sidebar.html:7
-msgid "Education"
-msgstr "Edukacja"
-
 #: .\root\templates\components\sidebar.html:8
 msgid "Skills"
 msgstr "Umiejętności"
@@ -72,10 +76,6 @@ msgstr "Doświadczenie"
 #: .\root\templates\components\sidebar.html:10
 msgid "Interest"
 msgstr "Zainteresowania"
-
-#: .\root\templates\components\sidebar.html:11
-msgid "Contact"
-msgstr "Kontakt"
 
 #: .\root\templatetags\root_extras.py:46
 msgid "Comming back soon"
@@ -805,219 +805,219 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:14
 msgid "January"
-msgstr ""
+msgstr "Styczeń"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:14
 msgid "February"
-msgstr ""
+msgstr "Luty"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:14
 msgid "March"
-msgstr ""
+msgstr "Marzec"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:14
 msgid "April"
-msgstr ""
+msgstr "Kwiecień"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:14
 msgid "May"
-msgstr ""
+msgstr "Maj"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:14
 msgid "June"
-msgstr ""
+msgstr "Czerwiec"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:15
 msgid "July"
-msgstr ""
+msgstr "Lipiec"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:15
 msgid "August"
-msgstr ""
+msgstr "Sierpień"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:15
 msgid "September"
-msgstr ""
+msgstr "Wrzesień"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:15
 msgid "October"
-msgstr ""
+msgstr "Październik"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:15
 msgid "November"
-msgstr ""
+msgstr "Listopad"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:16
 msgid "December"
-msgstr ""
+msgstr "Grudzień"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:19
 msgid "jan"
-msgstr ""
+msgstr "sty"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:19
 msgid "feb"
-msgstr ""
+msgstr "lut"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:19
 msgid "mar"
-msgstr ""
+msgstr "mar"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:19
 msgid "apr"
-msgstr ""
+msgstr "kwi"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:19
 msgid "may"
-msgstr ""
+msgstr "maj"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:19
 msgid "jun"
-msgstr ""
+msgstr "cze"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:20
 msgid "jul"
-msgstr ""
+msgstr "lip"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:20
 msgid "aug"
-msgstr ""
+msgstr "sie"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:20
 msgid "sep"
-msgstr ""
+msgstr "wrz"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:20
 msgid "oct"
-msgstr ""
+msgstr "paź"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:20
 msgid "nov"
-msgstr ""
+msgstr "lis"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:20
 msgid "dec"
-msgstr ""
+msgstr "gru"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:23
 msgctxt "abbrev. month"
 msgid "Jan."
-msgstr ""
+msgstr "Sty."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:24
 msgctxt "abbrev. month"
 msgid "Feb."
-msgstr ""
+msgstr "Lut."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:25
 msgctxt "abbrev. month"
 msgid "March"
-msgstr ""
+msgstr "Mar."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:26
 msgctxt "abbrev. month"
 msgid "April"
-msgstr ""
+msgstr "Kwi."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:27
 msgctxt "abbrev. month"
 msgid "May"
-msgstr ""
+msgstr "Maj"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:28
 msgctxt "abbrev. month"
 msgid "June"
-msgstr ""
+msgstr "Cze."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:29
 msgctxt "abbrev. month"
 msgid "July"
-msgstr ""
+msgstr "Lip."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:30
 msgctxt "abbrev. month"
 msgid "Aug."
-msgstr ""
+msgstr "Sie."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:31
 msgctxt "abbrev. month"
 msgid "Sept."
-msgstr ""
+msgstr "Wrz."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:32
 msgctxt "abbrev. month"
 msgid "Oct."
-msgstr ""
+msgstr "Paź."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:33
 msgctxt "abbrev. month"
 msgid "Nov."
-msgstr ""
+msgstr "Lis."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:34
 msgctxt "abbrev. month"
 msgid "Dec."
-msgstr ""
+msgstr "Gru."
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:37
 msgctxt "alt. month"
 msgid "January"
-msgstr ""
+msgstr "Styczeń"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:38
 msgctxt "alt. month"
 msgid "February"
-msgstr ""
+msgstr "Luty"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:39
 msgctxt "alt. month"
 msgid "March"
-msgstr ""
+msgstr "Marzec"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:40
 msgctxt "alt. month"
 msgid "April"
-msgstr ""
+msgstr "Kwiecień"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:41
 msgctxt "alt. month"
 msgid "May"
-msgstr ""
+msgstr "Maj"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:42
 msgctxt "alt. month"
 msgid "June"
-msgstr ""
+msgstr "Czerwiec"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:43
 msgctxt "alt. month"
 msgid "July"
-msgstr ""
+msgstr "Lipiec"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:44
 msgctxt "alt. month"
 msgid "August"
-msgstr ""
+msgstr "Sierpień"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:45
 msgctxt "alt. month"
 msgid "September"
-msgstr ""
+msgstr "Wrzesień"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:46
 msgctxt "alt. month"
 msgid "October"
-msgstr ""
+msgstr "Październik"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:47
 msgctxt "alt. month"
 msgid "November"
-msgstr ""
+msgstr "Listopad"
 
 #: .\venv\Lib\site-packages\django\utils\dates.py:48
 msgctxt "alt. month"
 msgid "December"
-msgstr ""
+msgstr "Grudzień"
 
 #: .\venv\Lib\site-packages\django\utils\ipv6.py:8
 msgid "This is not a valid IPv6 address."
@@ -1031,7 +1031,7 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\utils\text.py:237
 msgid "or"
-msgstr ""
+msgstr "lubs"
 
 #. Translators: This string is used as a separator between list elements
 #: .\venv\Lib\site-packages\django\utils\text.py:256
@@ -1262,6 +1262,11 @@ msgstr ""
 #: .\venv\Lib\site-packages\djongo\models\fields.py:633
 msgid "ObjectId"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Contact"
+#~ msgid "contact"
+#~ msgstr "Kontakt"
 
 #~ msgid "Hobbies"
 #~ msgstr "Zainteresowania"

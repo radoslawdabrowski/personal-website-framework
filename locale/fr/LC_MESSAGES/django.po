@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-13 16:02+0100\n"
+"POT-Creation-Date: 2019-03-14 14:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,7 +38,17 @@ msgid "get my resume"
 msgstr ""
 
 #: .\cv\templates\components\about.html:19
-msgid "contact"
+#: .\root\templates\components\sidebar.html:11
+msgid "Contact"
+msgstr ""
+
+#: .\cv\templates\components\education.html:6
+#: .\root\templates\components\sidebar.html:7
+msgid "Education"
+msgstr ""
+
+#: .\cv\templates\components\education.html:21
+msgid "Now"
 msgstr ""
 
 #: .\root\templates\components\footer.html:10
@@ -53,10 +63,6 @@ msgstr ""
 msgid "About"
 msgstr ""
 
-#: .\root\templates\components\sidebar.html:7
-msgid "Education"
-msgstr ""
-
 #: .\root\templates\components\sidebar.html:8
 msgid "Skills"
 msgstr ""
@@ -67,10 +73,6 @@ msgstr ""
 
 #: .\root\templates\components\sidebar.html:10
 msgid "Interest"
-msgstr ""
-
-#: .\root\templates\components\sidebar.html:11
-msgid "Contact"
 msgstr ""
 
 #: .\root\templatetags\root_extras.py:46
