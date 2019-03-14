@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.shortcuts import render
-from .models import EducationEntity
+from .models import EducationEntity, AttributeEntity
 
 
 # Create your views here.
@@ -25,7 +25,9 @@ def interests_view_context():
 
 
 def about_view_context():
-    return {}
+    return {
+        'welcome': AttributeEntity.objects.filter(key='ATTRIBUTE_WEBSITE_WELCOME').get().value
+    }
 
 
 def skills_view_context():
