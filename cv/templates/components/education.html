@@ -1,45 +1,33 @@
+{% load i18n %}
 <section id="education" class="section">
     <div class="container">
         <div class="section-title">
-            <h4 class="text-uppercase text-center"><i class="title-icon fa fa-graduation-cap"></i>Edukacja</h4>
+            <h4 class="text-uppercase text-center">
+                <i class="title-icon fa fa-graduation-cap"></i>{% trans 'Education' %}
+            </h4>
         </div>
         <div id="timeline-education">
-            <div class="timeline-block">
-                <div class="timeline-dot"><h6>L</h6></div>
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <h6 class="timeline-title">Szkoła średnia</h6>
-                        <div class="timeline-info">
-                            <h6>
-                                <small>III Liceum ogólnokształcące z oddzialami dwujęzycznymi w Zabrzu</small>
-                            </h6>
-                            <h6>
-                                <small>Wrz 2009 - Cze 2012</small>
-                            </h6>
+            {% for education in educations %}
+                <div class="timeline-block">
+                    <div class="timeline-dot"><h6>{{ education.symbol }}</h6></div>
+                    <div class="card timeline-content">
+                        <div class="card-content">
+                            <h6 class="timeline-title">{{ education.title.name }}</h6>
+                            <div class="timeline-info">
+                                <h6>
+                                    <small>{{ education.name }}</small>
+                                </h6>
+                                <h6>
+                                    <small>{{ education.start_date }} - {{ education.end_date }}</small>
+                                </h6>
+                            </div>
+                            <p>
+                                {{ education.description | safe}}
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="timeline-block">
-                <div class="timeline-dot"><h6>U</h6></div>
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <h6 class="timeline-title">Szkoła wyższa</h6>
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Uniwersytet Śląski w Katowicach</small>
-                            </h6>
-                            <h6>
-                                <small>Jan 2012 - Obecnie</small>
-                            </h6>
-                        </div>
-                        <p>
-                            Studia inżynierskie. Temat pracy dyplomowej: Aplikacja wspomagająca pracę działu kadr i płac w firmie.
-                            <a href="https://workbook.ovh" target="_blank">workbook.ovh</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

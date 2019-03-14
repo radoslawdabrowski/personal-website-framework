@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.shortcuts import render
+from .models import EducationEntity
 
 
 # Create your views here.
@@ -10,7 +11,9 @@ def cv_view(request, *args, **kwargs):
 
 
 def education_view_context():
-    return {}
+    return {
+        'educations': EducationEntity.objects.all().order_by('-start_date')
+    }
 
 
 def experience_view_context():
