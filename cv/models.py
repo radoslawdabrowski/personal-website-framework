@@ -14,5 +14,5 @@ class EducationEntity(models.Model):
     title = models.ForeignKey(EducationTypeEntity, on_delete=models.DO_NOTHING)
     name = models.TextField()
     start_date = models.DateField()
-    end_date = models.DateField(null=True)
-    description = models.TextField(null=True)
+    end_date = models.DateField(null=True, blank=True)
+    description = models.TextField(null=True, blank=True)

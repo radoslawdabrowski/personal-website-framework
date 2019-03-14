@@ -18,7 +18,7 @@
                                     <small>{{ education.name }}</small>
                                 </h6>
                                 <h6>
-                                    <small>{{ education.start_date }} - {{ education.end_date }}</small>
+                                    <small>{{ education.start_date }} - {% firstof education.end_date _("Now") %}</small>
                                 </h6>
                             </div>
                             <p>
