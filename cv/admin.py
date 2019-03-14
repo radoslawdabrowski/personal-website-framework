@@ -1,8 +1,7 @@
 from django.contrib import admin
 
-from .models import EducationEntity, EducationTypeEntity, AttributeEntity
+from .models import EducationEntity, EducationTypeEntity
 
 # Register your models here.
 admin.site.register(EducationTypeEntity)
 admin.site.register(EducationEntity)
-admin.site.register(AttributeEntity)

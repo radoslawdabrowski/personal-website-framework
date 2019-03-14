@@ -2,7 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.shortcuts import render
-from .models import EducationEntity, AttributeEntity
+from .models import EducationEntity
+from attributes.models import AttributeEntity
 
 
 # Create your views here.
