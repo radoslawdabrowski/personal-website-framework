@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-14 14:02+0100\n"
+"POT-Creation-Date: 2019-03-14 15:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,27 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\app\settings.py:116
-msgid "English"
-msgstr ""
-
-#: .\app\settings.py:117
-msgid "Polish"
-msgstr ""
-
-#: .\app\settings.py:118
-msgid "German"
-msgstr ""
-
-#: .\app\settings.py:119
-msgid "French"
-msgstr ""
-
-#: .\cv\templates\components\about.html:18
+#: .\cv\templates\components\about.html:12
 msgid "get my resume"
 msgstr ""
 
-#: .\cv\templates\components\about.html:19
+#: .\cv\templates\components\about.html:13
 #: .\root\templates\components\sidebar.html:11
 msgid "Contact"
 msgstr ""
@@ -49,6 +33,22 @@ msgstr ""
 
 #: .\cv\templates\components\education.html:21
 msgid "Now"
+msgstr ""
+
+#: .\public_python\settings.py:117
+msgid "English"
+msgstr ""
+
+#: .\public_python\settings.py:118
+msgid "Polish"
+msgstr ""
+
+#: .\public_python\settings.py:119
+msgid "German"
+msgstr ""
+
+#: .\public_python\settings.py:120
+msgid "French"
 msgstr ""
 
 #: .\root\templates\components\footer.html:10

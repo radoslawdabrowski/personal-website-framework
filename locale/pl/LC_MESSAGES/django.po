@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-14 14:02+0100\n"
+"POT-Creation-Date: 2019-03-14 15:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,27 +19,11 @@ msgstr ""
 "100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%"
 "10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: .\app\settings.py:116
-msgid "English"
-msgstr "Angielski"
-
-#: .\app\settings.py:117
-msgid "Polish"
-msgstr "Polski"
-
-#: .\app\settings.py:118
-msgid "German"
-msgstr "Niemiecki"
-
-#: .\app\settings.py:119
-msgid "French"
-msgstr "Francuski"
-
-#: .\cv\templates\components\about.html:18
+#: .\cv\templates\components\about.html:12
 msgid "get my resume"
 msgstr "Pobierz CV"
 
-#: .\cv\templates\components\about.html:19
+#: .\cv\templates\components\about.html:13
 #: .\root\templates\components\sidebar.html:11
 msgid "Contact"
 msgstr "Kontakt"
@@ -52,6 +36,22 @@ msgstr "Edukacja"
 #: .\cv\templates\components\education.html:21
 msgid "Now"
 msgstr "Obecnie"
+
+#: .\public_python\settings.py:117
+msgid "English"
+msgstr "Angielski"
+
+#: .\public_python\settings.py:118
+msgid "Polish"
+msgstr "Polski"
+
+#: .\public_python\settings.py:119
+msgid "German"
+msgstr "Niemiecki"
+
+#: .\public_python\settings.py:120
+msgid "French"
+msgstr "Francuski"
 
 #: .\root\templates\components\footer.html:10
 msgid "All right reserved"
