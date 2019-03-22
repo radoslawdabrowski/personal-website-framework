@@ -1,70 +1,29 @@
+{% load i18n %}
 <section id="experience" class="section">
     <div class="container">
         <div class="section-title">
-            <h4 class="text-uppercase text-center"><i class="title-icon fa fa-suitcase"></i>Doświadczenie</h4>
+            <h4 class="text-uppercase text-center"><i class="title-icon fa fa-suitcase"></i>{% trans 'Experience' %}</h4>
         </div>
         <div id="timeline-experience">
-            <div class="timeline-block">
-                <div class="timeline-dot"><h6>M</h6></div>
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <h6 class="timeline-title">Młodszy specjalista ds. programowania</h6>
+            {% for experience in experiences %}
+                <div class="timeline-block">
+                    <div class="timeline-dot">
+                        <h6>{{ experience.symbol }}</h6>
+                    </div>
+                    <div class="card timeline-content">
+                        <h6 class="timeline-title">{{ experience.title.name }}</h6>
                         <div class="timeline-info">
                             <h6>
-                                <small>Centralny Ośrodek Informatyzacji Górnictwa S.A.</small>
+                                <small>{{ experience.company.name }}</small>
                             </h6>
                             <h6>
-                                <small>cze 2014 - Sty 2015</small>
+                                <small>{{ experience.start_date }} - {% firstof experience.end_date _("Now") %}</small>
                             </h6>
                         </div>
-                        <p>
-                            Rozpoczłem moją karierę tutaj jako jedna z osób odpowiedzialnych za przeprojektowanie istniejącego
-                            systemu ERP do technologii Java ADF.
-                        </p>
+                        <p>{{ experience.description }}</p>
                     </div>
                 </div>
-            </div>
-            <div class="timeline-block">
-                <div class="timeline-dot"><h6>P</h6></div>
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <h6 class="timeline-title">Programista</h6>
-                        <div class="timeline-info">
-                            <h6>
-                                <small>Centralny Ośrodek Informatyzacji Górnictwa S.A.</small>
-                            </h6>
-                            <h6>
-                                <small>Sty 2015 - Lis 2016</small>
-                            </h6>
-                        </div>
-                        <p>
-                            Praca nad systemami ERP Ksat 2000i oraz Ksat 3, wykorzystując znajomość Oracle SQL, PL/SQL,
-                            Java ADF. Budowa i utrzymanie portali eUsług - eUrząd oraz PLIP w technologiach PHP, MySQL, Java
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline-block">
-                <div class="timeline-dot"><h6>P</h6></div>
-                <div class="card timeline-content">
-                    <div class="card-content">
-                        <h6 class="timeline-title">Projektant & Programista Java</h6>
-                        <div class="timeline-info">
-                            <h6>
-                                <small>COIG S.A.</small>
-                            </h6>
-                            <h6>
-                                <small>Lis 2016 - Obecnie</small>
-                            </h6>
-                        </div>
-                        <p>
-                            Projekt oraz implementacja bazy danych oraz webserwisu dla aplikacji Venroll - stosowane technologie: Spring Boot, Hibernate, PostgreSQL
-                            Zdobycie wiedzy z zakresu uczenia maszynowego opartego na h2o.ai
-                            Praca nad systemem ERP - implementacja rozwiązań systemu GIS.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
