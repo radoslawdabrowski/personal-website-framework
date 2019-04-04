@@ -15,7 +15,7 @@ def experience():
     return experience_view_context()
 
 
-@register.inclusion_tag('components/intertests.html')
+@register.inclusion_tag('components/interests.html')
 def interests():
     return interests_view_context()
 
