@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'public_python.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'db_app'
+        'NAME': 'mo1134_app'
     }
 }
 
