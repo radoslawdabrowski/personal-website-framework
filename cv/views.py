@@ -30,15 +30,21 @@ def interests_view_context():
     }
 
 
+# todo refactor
 def about_view_context():
+    welcome = "Welcome"
+    welcome_attr = AttributeEntity.objects.filter(key='ATTRIBUTE_WEBSITE_WELCOME').get()
+    if welcome_attr != null:
+        welcome = welcome_attr.value
+
     return {
-        'welcome': AttributeEntity.objects.filter(key='ATTRIBUTE_WEBSITE_WELCOME').get().value
+        'welcome': welcome
     }
 
 
 def skills_view_context():
     count = SkillCategoryDictionary.objects.count()
-    columns = 12/count
+    columns = 12 / count
 
     categories = SkillCategoryDictionary.objects.all()
     dictionary = {}
