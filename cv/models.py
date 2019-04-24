@@ -54,3 +54,19 @@ class InterestEntity(models.Model):
     def __str__(self):
         return self.name
 
+
+class SkillCategoryDictionary(models.Model):
+    name: models.TextField(null=False, blank=False)
+
+    def __str__(self):
+        return self.name
+
+
+class SkillEntity(models.Model):
+    name: models.TextField(null=False, blank=False)
+    percent: models.IntegerField(null=False, blank=False)
+    category: models.ForeignKey(SkillCategoryDictionary, on_delete=models.DO_NOTHING)
+
+    def __str__(self):
+        return self.name
+
