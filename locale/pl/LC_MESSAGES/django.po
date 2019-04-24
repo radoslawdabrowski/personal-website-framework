@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-04 13:46+0200\n"
+"POT-Creation-Date: 2019-04-24 11:43+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,6 +49,11 @@ msgstr "Doświadczenie"
 msgid "Interests"
 msgstr "Zainteresowania"
 
+#: .\cv\templates\components\skills.html:5
+#: .\root\templates\components\sidebar.html:8
+msgid "Skills"
+msgstr "Umiejętności"
+
 #: .\public_python\settings.py:117
 msgid "English"
 msgstr "Angielski"
@@ -76,10 +81,6 @@ msgstr "Strona główna"
 #: .\root\templates\components\sidebar.html:6
 msgid "About"
 msgstr "O Mnie"
-
-#: .\root\templates\components\sidebar.html:8
-msgid "Skills"
-msgstr "Umiejętności"
 
 #: .\root\templates\components\sidebar.html:10
 msgid "Interest"
