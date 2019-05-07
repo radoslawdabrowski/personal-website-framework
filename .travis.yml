@@ -1,0 +1,21 @@
+language: python
+
+python: 3.7.2
+services: mongodb
+
+env: 
+ - DJANGO=2.1.7
+
+before_install:
+  - export DJANGO_SETTINGS_MODULE=public_python.setting  
+  - export PIP_USE_MIRRORS=true
+  - export PYTHONPATH="/usr/local/lib/python3.7/dist-packages"
+  
+install:
+  - pip install -r requirements.txt
+  - pip install django==$DJANGO --quiet
+  - pip install psycopg2 --quiet
+
+script:
+  - python manage.py makemigrations
+  - python mange.py migrate
