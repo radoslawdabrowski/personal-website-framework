@@ -1,140 +1,28 @@
+{% load i18n %}
 <section id="skills" class="section">
     <div class="container">
         <div class="section-title">
-            <h4 class="text-uppercase text-center"><i class="title-icon fa fa-sliders"></i>Umiejętności</h4>
+            <h4 class="text-uppercase text-center"><i class="title-icon fa fa-sliders"></i>{% trans "Skills" %}</h4>
         </div>
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div id="skills-card" class="card">
                     <div class="card-content">
                         <div class="row">
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <div class="skills-title">
-                                    <h6 class="text-center">Profesjonalne</h6>
+                            {% for category, skills in categories.items %}
+                                <div class="col-md-{{ columns }} col-sm-{{ columns }} col-xs-12">
+                                    <div class="skills-title">
+                                        <h6 class="text-center">{{ category.name }}</h6>
+                                    </div>
+                                    {% for skill in skills %}
+                                        <div class="skillbar" data-percent="{{ skill.percent }}%">
+                                            <div class="skillbar-title"><span>{{ skill.name }}</span></div>
+                                            <div class="skillbar-bar"></div>
+                                            <div class="skill-bar-percent">{{ skill.percent }}%</div>
+                                        </div>
+                                    {% endfor %}
                                 </div>
-                                <div class="skillbar" data-percent="90%">
-                                    <div class="skillbar-title"><span>Java</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">90%</div>
-                                </div>
-                                <div class="skillbar" data-percent="90%">
-                                    <div class="skillbar-title"><span>Spring-Boot</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">90%</div>
-                                </div>
-                                <div class="skillbar" data-percent="90%">
-                                    <div class="skillbar-title"><span>Hibernate</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">90%</div>
-                                </div>
-                                <div class="skillbar" data-percent="70%">
-                                    <div class="skillbar-title"><span>PostgreSQL</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">70%</div>
-                                </div>
-                                <div class="skillbar" data-percent="50%">
-                                    <div class="skillbar-title"><span>Angular</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">50%</div>
-                                </div>
-                                <div class="skillbar" data-percent="75%">
-                                    <div class="skillbar-title"><span>jQuery</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">75%</div>
-                                </div>
-                                <div class="skillbar" data-percent="80%">
-                                    <div class="skillbar-title"><span>PHP</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">80%</div>
-                                </div>
-                                <div class="skillbar" data-percent="75%">
-                                    <div class="skillbar-title"><span>HTML5</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">75%</div>
-                                </div>
-                                <div class="skillbar" data-percent="60%">
-                                    <div class="skillbar-title"><span>SASS</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">60%</div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <div class="skills-title">
-                                    <h6 class="text-center">Personalne</h6>
-                                </div>
-                                <div class="skillbar" data-percent="80%">
-                                    <div class="skillbar-title"><span>Komunikacja</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">80%</div>
-                                </div>
-                                <div class="skillbar" data-percent="60%">
-                                    <div class="skillbar-title"><span>Praca w zespole</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">60%</div>
-                                </div>
-                                <div class="skillbar" data-percent="70%">
-                                    <div class="skillbar-title"><span>Kreatywność</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">70%</div>
-                                </div>
-                                <div class="skillbar" data-percent="70%">
-                                    <div class="skillbar-title"><span>Poświęcenie</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">70%</div>
-                                </div>
-                                <div class="skillbar" data-percent="50%">
-                                    <div class="skillbar-title"><span>SCRUM</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">50%</div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-4 col-xs-12">
-                                <div class="skills-title">
-                                    <h6 class="text-center">Oprogramowanie</h6>
-                                </div>
-                                <div class="skillbar" data-percent="80%">
-                                    <div class="skillbar-title"><span>InteliJ IDEA</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">80%</div>
-                                </div>
-                                <div class="skillbar" data-percent="70%">
-                                    <div class="skillbar-title"><span>Maven</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">70%</div>
-                                </div>
-                                <div class="skillbar" data-percent="60%">
-                                    <div class="skillbar-title"><span>Tomcat/JBoss/Weblogic</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">60%</div>
-                                </div>
-                                <div class="skillbar" data-percent="70%">
-                                    <div class="skillbar-title"><span>Apache</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">70%</div>
-                                </div>
-                                <div class="skillbar" data-percent="50%">
-                                    <div class="skillbar-title"><span>Node.js</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">50%</div>
-                                </div>
-                                <div class="skillbar" data-percent="80%">
-                                    <div class="skillbar-title"><span>Terminal</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">80%</div>
-                                </div>
-                                <div class="skillbar" data-percent="90%">
-                                    <div class="skillbar-title"><span>Windows OS</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">90%</div>
-                                </div>
-                                <div class="skillbar" data-percent="60%">
-                                    <div class="skillbar-title"><span>Linux/Mac OS</span></div>
-                                    <div class="skillbar-bar"></div>
-                                    <div class="skill-bar-percent">60%</div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

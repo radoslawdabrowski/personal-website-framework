@@ -1,0 +1,5 @@
+manage.py makemessages -i venv
+manage.py compilemessages
+
+manage.py makemigrations
+manage.py migrate

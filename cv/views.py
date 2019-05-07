@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.shortcuts import render
-from .models import EducationEntity, ExperienceEntity
+from .models import EducationEntity, ExperienceEntity, InterestEntity, SkillCategoryDictionary
 from attributes.models import AttributeEntity
 
 
@@ -24,7 +24,10 @@ def experience_view_context():
 
 
 def interests_view_context():
-    return {}
+    return {
+        'description': AttributeEntity.objects.filter(key='ATTRIBUTE_INTERESTS_DESCRIPTION'),
+        'interests': InterestEntity.objects.all()
+    }
 
 
 def about_view_context():
@@ -34,4 +37,17 @@ def about_view_context():
 
 
 def skills_view_context():
-    return {}
+    count = SkillCategoryDictionary.objects.count()
+    columns = 12/count
+
+    categories = SkillCategoryDictionary.objects.all()
+    dictionary = {}
+
+    for category in categories:
+        dictionary[category] = category.skill_set.all()
+
+    return {
+        "skills_category_count": count,
+        "categories": dictionary,
+        "columns": columns
+    }

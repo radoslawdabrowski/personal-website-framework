@@ -17,6 +17,9 @@ class EducationEntity(models.Model):
     end_date = models.DateField(null=True, blank=True)
     description = models.TextField(null=True, blank=True)
 
+    def __str__(self):
+        return self.name
+
 
 class CompanyDictionary(models.Model):
     name = models.TextField()
@@ -39,3 +42,31 @@ class ExperienceEntity(models.Model):
     description = models.TextField(null=True, blank=True)
     start_date = models.DateField()
     end_date = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        return self.title
+
+
+class InterestEntity(models.Model):
+    icon = models.TextField(null=False, blank=False)
+    name = models.TextField(null=False, blank=False)
+
+    def __str__(self):
+        return self.name
+
+
+class SkillCategoryDictionary(models.Model):
+    name: models.TextField(null=False, blank=False)
+
+    def __str__(self):
+        return self.name
+
+
+class SkillEntity(models.Model):
+    name: models.TextField(null=False, blank=False)
+    percent: models.IntegerField(null=False, blank=False)
+    category: models.ForeignKey(SkillCategoryDictionary, on_delete=models.DO_NOTHING)
+
+    def __str__(self):
+        return self.name
+
