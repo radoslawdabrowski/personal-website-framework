@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/radoslawdabrowski/radoslawdabrowski.pl.svg?branch=master)](https://travis-ci.org/radoslawdabrowski/radoslawdabrowski.pl)
+[![codebeat badge](https://codebeat.co/badges/144b3b07-2f45-409d-afc9-0f51edd58b16)](https://codebeat.co/projects/github-com-radoslawdabrowski-radoslawdabrowski-pl-master)
 
 
 ## Welcome to GitHub Pages
