@@ -5,5 +5,8 @@
 [![github](https://img.shields.io/github/languages/top/radoslawdabrowski/radoslawdabrowski.pl.svg?style=flat-square&logo=github)](https://github.com/radoslawdabrowski/radoslawdabrowski.pl)
 [![github](https://img.shields.io/github/languages/count/radoslawdabrowski/radoslawdabrowski.pl.svg?style=flat-square&logo=github)](https://github.com/radoslawdabrowski/radoslawdabrowski.pl)
 [![github](https://img.shields.io/github/languages/code-size/radoslawdabrowski/radoslawdabrowski.pl.svg?style=flat-square&logo=github)](https://github.com/radoslawdabrowski/radoslawdabrowski.pl)
+[![github](https://img.shields.io/github/languages/code-size/radoslawdabrowski/radoslawdabrowski.pl.svg?style=flat-square&logo=github)](https://github.com/radoslawdabrowski/radoslawdabrowski.pl)
+[![github](https://img.shields.io/github/license/radoslawdabrowski/radoslawdabrowski.pl.svg?style=flat-square&logo=github)](https://github.com/radoslawdabrowski/radoslawdabrowski.pl)
+
 
 My personal website
