@@ -7,7 +7,7 @@ env:
  - DJANGO=2.1.7
 
 before_install:
-  - export DJANGO_SETTINGS_MODULE=public_python.setting  
+  - export DJANGO_SETTINGS_MODULE=public_python.settings  
   - export PIP_USE_MIRRORS=true
   - export PYTHONPATH="/usr/local/lib/python3.7/dist-packages"
   
@@ -18,4 +18,5 @@ install:
 
 script:
   - python manage.py makemigrations
-  - python mange.py migrate
+  - python manage.py migrate
+  - python manage.py test
