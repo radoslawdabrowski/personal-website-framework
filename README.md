@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/radoslawdabrowski/radoslawdabrowski.pl.svg?branch=master)](https://travis-ci.org/radoslawdabrowski/radoslawdabrowski.pl)
-[![Coverage Status](https://coveralls.io/repos/github/radoslawdabrowski/radoslawdabrowski.pl/badge.svg?branch=master)](https://coveralls.io/github/radoslawdabrowski/radoslawdabrowski.pl?branch=master)
+[![codecov](https://codecov.io/gh/radoslawdabrowski/radoslawdabrowski.pl/branch/master/graph/badge.svg)](https://codecov.io/gh/radoslawdabrowski/radoslawdabrowski.pl)
 [![codebeat badge](https://codebeat.co/badges/144b3b07-2f45-409d-afc9-0f51edd58b16)](https://codebeat.co/projects/github-com-radoslawdabrowski-radoslawdabrowski-pl-master)
 
 
