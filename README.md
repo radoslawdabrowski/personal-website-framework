@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/radoslawdabrowski/radoslawdabrowski.pl.svg?branch=master)](https://travis-ci.org/radoslawdabrowski/radoslawdabrowski.pl)
+
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/radoslawdabrowski/personal-website/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
