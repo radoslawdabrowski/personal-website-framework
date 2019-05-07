@@ -28,4 +28,4 @@
   </a>
 </p>
 
-This is theme and cms for [radoslawdabrowski.pl](radoslawdabrowski.pl), my personal website.
+This is theme and cms for [radoslawdabrowski.pl](https://radoslawdabrowski.pl), my personal website.
