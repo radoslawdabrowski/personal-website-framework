@@ -1,12 +1,8 @@
 from django.shortcuts import render
-
-# Create your views here.
-from django.shortcuts import render
 from .models import EducationEntity, ExperienceEntity, InterestEntity, SkillCategoryDictionary
 from attributes.models import AttributeEntity
 
 
-# Create your views here.
 def cv_view(request, *args, **kwargs):
     return render(request, 'cv.html', {})
 
