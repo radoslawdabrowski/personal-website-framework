@@ -1,0 +1,54 @@
+{% load static from staticfiles %}
+{% load root_extras %}
+{% load contact_extras %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    {% get_website_title as title %}
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    {% get_description as description %}
+    <meta name="Description" content="{{ description }}">
+    {% get_keywords as keywords %}
+    <meta name="Keywords" content="{{ keywords }}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header id="home">
+        <!--
+        ===========================================
+                        SIDEBAR
+        ===========================================
+        -->
+        {% sidebar %}
+
+        <!--
+        ===========================================
+                        HEADER
+        ===========================================
+        -->
+        {% header %}
+    </header>
+
+    {% get_no_content as no_content %}
+    {% block content %}
+        {{ no_content }}
+    {% endblock %}
+    <!--
+    ===========================================
+                    CONTACT
+    ===========================================
+    -->
+    {% contact %}
+
+    <!--
+    ===========================================
+                    FOOTER
+    ===========================================
+    -->
+    {% footer %}
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
