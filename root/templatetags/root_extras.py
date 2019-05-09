@@ -2,6 +2,7 @@ from django import template
 from django.utils.translation import ugettext as _
 
 from root.views import sidebar_view_context, footer_view_context, loading_view_context, header_view_context
+from attributes.models import AttributeEntity, SocialEntity
 
 register = template.Library()
 
@@ -28,17 +29,17 @@ def header():
 
 @register.simple_tag
 def get_website_title():
-    return 'Radosław Dąbrowski'
+    return AttributeEntity.objects.filter(key="ATTRIBUTE_WEBSITE_TITLE").get()
 
 
 @register.simple_tag
 def get_description():
-    return ''
+    return AttributeEntity.objects.filter(key="ATTRIBUTE_WEBSITE_DESC").get()
 
 
 @register.simple_tag
 def get_keywords():
-    return ''
+    return AttributeEntity.objects.filter(key="ATTRIBUTE_WEBSITE_KEYWORDS").get()
 
 
 @register.simple_tag
@@ -48,52 +49,52 @@ def get_no_content():
 
 @register.simple_tag
 def get_position():
-    return _('Java Developer')
+    return AttributeEntity.objects.filter(key="ATTRIBUTE_JOB_POSITION").get()
 
 
 @register.simple_tag
 def get_name():
-    return 'Radosław Dąbrowski'
+    return AttributeEntity.objects.filter(key="ATTRIBUTE_NAME").get()
 
 
 @register.simple_tag
 def get_email():
-    return 'kontakt@radoslawdabrowski.pl'
+    return AttributeEntity.objects.filter(key="ATTRIBUTE_EMAIL").get()
 
 
 @register.simple_tag
 def get_phone():
-    return '+48 508 630 984'
+    return AttributeEntity.objects.filter(key="ATTRIBUTE_PHONE").get()
 
 
 @register.simple_tag
 def get_website():
-    return 'radoslawdabrowski.pl'
+    return AttributeEntity.objects.filter(key="ATTRIBUTE_WEBSITE").get()
 
 
 @register.simple_tag
 def get_social():
-    # todo database gather informatins
-    return [
-        {
-            'icon': 'fa-linkedin-in',
-            'url': 'https://www.linkedin.com/in/dabrowskiradoslaw',
-            'color': 'blue darken-3'
-        },
-        {
-            'icon': 'fa-github',
-            'url': 'https://github.com/radoslawdabrowski',
-            'color': 'grey darken-3'
-        },
-        {
-            'icon': 'fa-stack-overflow',
-            'url': 'https://stackoverflow.com/users/4693532/humblehunter',
-            'color': 'orange darken-2'
-        },
-        {
-            'icon': 'fa-codiepie',
-            'url': 'https://codeboards.io/profiles/93526',
-            'color': 'red darken-2'
-        }
-    ]
+    return SocialEntity.objects.all()
+    # return [
+    #     {
+    #         'icon': 'fa-linkedin-in',
+    #         'url': 'https://www.linkedin.com/in/dabrowskiradoslaw',
+    #         'color': 'blue darken-3'
+    #     },
+    #     {
+    #         'icon': 'fa-github',
+    #         'url': 'https://github.com/radoslawdabrowski',
+    #         'color': 'grey darken-3'
+    #     },
+    #     {
+    #         'icon': 'fa-stack-overflow',
+    #         'url': 'https://stackoverflow.com/users/4693532/humblehunter',
+    #         'color': 'orange darken-2'
+    #     },
+    #     {
+    #         'icon': 'fa-codiepie',
+    #         'url': 'https://codeboards.io/profiles/93526',
+    #         'color': 'red darken-2'
+    #     }
+    # ]
 
