@@ -1,14 +1,10 @@
-def sidebar_view_context():
+from django.shortcuts import render
+
+
+def navigation_view_content():
     return {}
 
 
-def footer_view_context():
+def sidebar_view_content():
     return {}
 
-
-def loading_view_context():
-    return {}
-
-
-def header_view_context():
-    return {}

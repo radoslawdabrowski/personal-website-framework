@@ -1,24 +1,86 @@
 {% load static from staticfiles %}
-{% load i18n %}
-<nav id="theMenu" class="menu">
-    <div id="menu-options" class="menu-wrap">
-        <a href="#home"><i class="title-icon fa fa-user"></i>{% trans 'Homepage' %}</a>
-        <a href="#about"><i class="title-icon fa fa-address-card"></i>{% trans 'About' %}</a>
-        <a href="#education"><i class="title-icon fa fa-graduation-cap"></i>{% trans 'Education' %}</a>
-        <a href="#skills"><i class="title-icon fa fa-sliders-v"></i>{% trans 'Skills' %}</a>
-        <a href="#experience"><i class="title-icon fa fa-suitcase"></i>{% trans 'Experience' %}</a>
-        <a href="#interest"><i class="title-icon fa fa-heart"></i>{% trans 'Interest' %}</a>
-        <hr class="no-gutters-vertical">
-        <a href="/blog"><i class="title-icon fa fa-blog"></i>{% trans 'Blog' %}</a>
-        <a href="/portfolio"><i class="title-icon fa fa-browser"></i>{% trans 'Portfolio' %}</a>
-        <hr class="no-gutters-vertical">
-        <a href="#contact"><i class="title-icon fa fa-envelope"></i>{% trans 'Contact' %}</a>
-    </div>
-    <div id="menuToggle">
-        <div class="toggle-normal">
-            <i class="material-icons top-bar">remove</i>
-            <i class="material-icons middle-bar">remove</i>
-            <i class="material-icons bottom-bar">remove</i>
+<aside class="col l4 m12 s12 sidebar z-depth-1" id="sidebar">
+    <div class="row">
+        <div class="heading">
+            <!-- ===== Image ===== -->
+            <div class="feature-img">
+                <a href="index.html"><img src="{% static 'images/profile-image.png' %}" class="responsive-img"
+                                          alt=""></a>
+            </div>
+            <!-- ===== Name ===== -->
+            <div class="title col s12 m12 l9 right wow fadeIn" data-wow-delay="0.1s">
+                <h2>Al Rayhan</h2>
+                <span>UI & UX Expert</span>
+            </div>
+        </div>
+        <div class="col l12 m12 s12 sort-info sidebar-item">
+            <div class="row">
+                <div class="col m12 s12 l3 icon">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="col m12 s12 l9 info wow fadeIn a1" data-wow-delay="0.1s">
+                    <div class="section-item-details">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et
+                            dolore magna aliqua . Ld do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col l12 m12 s12  mobile sidebar-item">
+            <div class="row">
+                <div class="col m12 s12 l3 icon">
+                    <i class="fa fa-phone"></i>
+                </div>
+                <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s">
+                    <div class="section-item-details">
+                        <div class="personal">
+                            <h4><a href="tel:555-555-5555">(111)-333-4444</a></h4>
+                            <span>mobile</span>
+                        </div>
+                        <div class="work">
+                            <h4><a href="tel:555-555-5555">(121)-323-3494</a></h4>
+                            <span>work</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col l12 m12 s12  email sidebar-item ">
+            <div class="row">
+                <div class="col m12 s12 l3 icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <div class="col m12 s12 l9 info wow fadeIn a3" data-wow-delay="0.3s">
+                    <div class="section-item-details">
+                        <div class="personal">
+                            <h4><a href="mailto:someone@example.com">mail@alrayhan.com</a></h4>
+                            <span>personal</span>
+                        </div>
+                        <div class="work">
+                            <h4><a href="mailto:someone@example.com">ar@deviserweb.com</a></h4>
+                            <span>work</span> <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col l12 m12 s12  address sidebar-item ">
+            <div class="row">
+                <div class="col l3 m12  s12 icon">
+                    <i class="fa fa-home"></i>
+                </div>
+                <div class="col m12 s12 l9 info wow fadeIn a4" data-wow-delay="0.4s">
+                    <div class="section-item-details">
+                        <div class="address-details">
+                            <h4>24 Golden Tower <span>(2nd floor)</span><br>
+                                Amborkhana, Sylhet.<br>
+                                <span>SYL-3RF87W</span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
+</aside>

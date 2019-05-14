@@ -41,10 +41,10 @@ INSTALLED_APPS = [
     'root',
     'attributes',
     'cv',
-    'cover_letter',
-    'blog',
-    'portfolio',
-    'contact'
+    # 'cover_letter',
+    # 'blog',
+    # 'portfolio',
+    # 'contact'
 ]
 
 MIDDLEWARE = [
