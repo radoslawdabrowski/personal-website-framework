@@ -1,141 +1,249 @@
-(function ($) {
+$(document).ready(function () {
     "use strict";
-    jQuery(document).ready(function () {
-        $('.toggle-normal').on('click', function () {
-            $('.top-bar').toggleClass('top-transform');
-            $('.middle-bar').toggleClass('middle-transform');
-            $('.bottom-bar').toggleClass('bottom-transform');
-        });
-        $('.section,div#menu-options a').on('click', function () {
-            $('nav#theMenu').removeClass('menu-open');
-            $('.top-bar').removeClass('top-transform');
-            $('.middle-bar').removeClass('middle-transform');
-            $('.bottom-bar').removeClass('bottom-transform');
-        });
-        $('div#menuToggle').on('click', function () {
-            $('div#menuToggle').toggleClass('active');
-            $('body').toggleClass('body-push-toright');
-            $('nav#theMenu').toggleClass('menu-open');
-        });
-        $(function () {
-            $('div#menu-options,div#about-btn').find('a[href*=#]:not([href=#])').click(function () {
-                if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-                    let target = $(this.hash);
-                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                    if (target.length) {
-                        $('html,body').animate({
-                            scrollTop: target.offset().top
-                        }, 900, "swing");
-                        return false;
-                    }
-                }
-            });
-        });
-        $(window).scroll(function () {
-            if ($(this).scrollTop() >= 50) {
-                $('div#scrollup').addClass('animated flipInY').fadeIn(200);
-            } else {
-                $('div#scrollup').fadeOut(200);
-            }
-        });
-        $('div#scrollup').on('click', function () {
-            $("html,body").animate({
-                scrollTop: 0
-            }, 600);
 
-            return false;
-        });
-        let all = '#a,#b,#c';
-        let afterFirst = '#b,#c';
-        $(afterFirst).addClass('hide');
-        $('a#all-sample').on('click', function () {
-            $('#add-more').removeClass('hide');
-            $(all).removeClass('tab-pane');
-            $(afterFirst).addClass('hide');
-        });
-        $('a.cate').on('click', function () {
-            $('#add-more').addClass('hide');
-            $(afterFirst).removeClass('hide');
-            $(all).addClass('tab-pane');
+    /***************************************************************************/
+    /* NAVIGATION  */
+    /***************************************************************************/
 
-        });
-        $('#add-more').on('click', function () {
-            if ($(all).hasClass('')) {
-                $(all).removeClass('tab-pane hide').addClass('x');
-                $('#port-add-icon').removeClass('fa-plus').addClass('fa-arrow-up');
-            } else {
-                $(afterFirst).addClass('hide');
-                $(all).removeClass('x');
-                $('#port-add-icon').addClass('fa-plus').removeClass('fa-arrow-up');
-            }
-        });
-        $('li.list-shuffle,#add-more').on('click', function () {
-            $(".inLeft")
-                .removeClass('InLeft')
-                .hide()
-                .addClass('InLeft')
-                .show();
-            $(".inRight")
-                .removeClass('InRight')
-                .hide()
-                .addClass('InRight')
-                .show();
-        });
-        $('div.skillbar').each(function () {
-            $(this).find('div.skillbar-bar').css({
-                width: $(this).attr('data-percent')
-            });
-        });
-        function clint() {
-            let $clientcarousel = $('ul#clients-list');
-            let clients = $clientcarousel.children().length;
-            let clientwidth = (clients * 140);
-            $clientcarousel.css('width', clientwidth);
+    $('.button-collapse').sideNav();
 
-            let rotating = true;
-            let clientspeed = 1800;
-            setInterval(rotateClients, clientspeed);
+    /**************************************************************************
+     SKILL BAR
+     **************************************************************************/
 
-            $(document).on({
-                mouseenter: function () {
-                    rotating = false;
-                },
-                mouseleave: function () {
-                    rotating = true;
-                }
-            }, '#clients');
+    $(".determinate").each(function () {
+        let width = $(this).text();
+        $(this).css("width", width)
+            .empty()
+            .append('<i class="fa fa-circle"></i>');
+    });
 
-            function rotateClients() {
-                if (rotating !== false) {
-                    let $first = $('ul#clients-list').find('li:first');
-                    $first.animate({'margin-left': '-140px'}, 2000, function () {
-                        $first.remove().css({'margin-left': '0px'});
-                        $('ul#clients-list').find('li:last').after($first);
-                    });
-                }
-            }
+
+    /**************************************************************************
+     BLOG POST
+     **************************************************************************/
+
+    jQuery(window).on('load', function () {
+        let $ = jQuery;
+        $('.blog').masonry({
+            itemSelector: '.blog-post',
+            columnWidth: '.blog-post',
+            percentPosition: true
+        });
+    });
+
+
+    let height = $('.caption').height();
+    if ($(window).width()) {
+        $('#featured').css('height', height);
+        $('#featured img').css('height', height);
+    }
+
+
+    /*************************************************************************
+     TOOLTIP
+     **************************************************************************/
+    $('.tooltipped').tooltip({delay: 50});
+
+    /**************************************************************************
+     WOW INIT
+     **************************************************************************/
+    const wow = new WOW({mobile: false});
+    wow.init();
+
+    /***************************************************************************
+     CONTACT FORM
+     ***************************************************************************/
+
+    $("#contactForm").validator().on("submit", function (event) {
+        if (event.isDefaultPrevented()) {
+            // handle the invalid form...
+            formError();
+            submitMSG(false, "Did you fill in the form properly?");
+        } else {
+            // everything looks good!
+            event.preventDefault();
+            submitForm();
         }
-        clint();
-        $(".carousel-inner").swipe({
-            swipeLeft: function () {
-                $(this).parent().carousel('next');
-            },
-            swipeRight: function () {
-                $(this).parent().carousel('prev');
-            },
-            threshold: 0
+    });
+
+    function submitForm() {
+        // Initiate Variables With Form Content
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let message = $("#message").val();
+
+        $.ajax({
+            type: "POST",
+            url: "process.php",
+            data: "name=" + name + "&email=" + email + "&message=" + message,
+            success: function (text) {
+                if (text === "success") {
+                    formSuccess();
+                } else {
+                    formError();
+                    submitMSG(false, text);
+                }
+            }
         });
+    }
+
+    function formSuccess() {
+        $("#contactForm")[0].reset();
+        submitMSG(true, "Message Sent!")
+    }
+
+    function formError() {
+        $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+            function () {
+                $(this).removeClass();
+            });
+    }
+
+    function submitMSG(valid, msg) {
+        let msgClasses;
+        if (valid) {
+            msgClasses = "h3 text-center fadeInUp animated text-success";
+        } else {
+            msgClasses = "h3 text-center text-danger";
+        }
+        $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+    }
+
+
+    /**************************************************************************
+     Projects
+     **************************************************************************/
+    // $('#portfolio-item').mixItUp();
+
+    $('.sa-view-project-detail').on('click', function (event) {
+        event.preventDefault();
+        let href = $(this).attr('href') + ' ' + $(this).attr('data-action'),
+            dataShow = $('#project-gallery-view'),
+            dataShowMeta = $('#project-gallery-view meta'),
+            dataHide = $('#portfolio-item'),
+            preLoader = $('#loader'),
+            backBtn = $('#back-button'),
+            filterBtn = $('#filter-button');
+
+        dataHide.animate({'marginLeft': '-120%'}, {duration: 400, queue: false});
+        filterBtn.animate({'marginLeft': '-120%'}, {duration: 400, queue: false});
+        dataHide.fadeOut(400);
+        filterBtn.fadeOut(400);
+        setTimeout(function () {
+            preLoader.show();
+        }, 400);
+        setTimeout(function () {
+            dataShow.load(href, function () {
+                dataShowMeta.remove();
+                preLoader.hide();
+                dataShow.fadeIn(600);
+                backBtn.fadeIn(600);
+            });
+        }, 800);
     });
-    jQuery(window).load(function () {
-        $('div#loading').fadeOut(500);
-        window.sr = ScrollReveal({reset: false});
-        let commonCards = '#port-add-icon,#map-card,.interest-icon-even,.interest-icon,' +
-            '.timeline-dot, .timeline-content,#add-more,#skills-card,#testimonials-card,' +
-            '#portfolios-card,#interest-card,#p-one,#p-two,#p-three,#blog-card,#contact-card,#clients';
-        // Customizing a reveal set
-        sr.reveal(commonCards, {duration: 1100});
-        sr.reveal('#about-card,.map-label', {duration: 1400, delay: 500});
-        sr.reveal('#v-card-holder', {duration: 1400, distance: '150px'});c
-        sr.reveal('.skillbar-bar', {duration: 1800, delay: 300, distance: '0'});
+
+    $('#back-button').on('click', function (event) {
+        event.preventDefault();
+        let dataShow = $('#portfolio-item'),
+            dataHide = $('#project-gallery-view'),
+            filterBtn = $('#filter-button');
+
+        $("[data-animate]").each(function () {
+            $(this).addClass($(this).attr('data-animate'));
+        });
+
+        dataHide.fadeOut(400);
+        $(this).fadeOut(400);
+        setTimeout(function () {
+            dataShow.animate({'marginLeft': '0'}, {duration: 400, queue: false});
+            filterBtn.animate({'marginLeft': '0'}, {duration: 400, queue: false});
+            dataShow.fadeIn(400);
+            filterBtn.fadeIn(400);
+        }, 400);
+        setTimeout(function () {
+            dataShow.find('.fadeInRight, .fadeInLeft, .fadeInUp, .fadeInDown').removeClass('fadeInRight').removeClass('fadeInLeft').removeClass('fadeInUp').removeClass('fadeInDown');
+        }, 1500);
     });
-})(jQuery);
+
+});
+
+/***************************************************************************
+ MAP
+ ***************************************************************************/
+
+google.maps.event.addDomListener(window, 'load', init);
+
+function init() {
+    const mapOptions = {
+        zoom: 17,
+        scrollwheel: false,
+        navigationControl: false,
+        center: new google.maps.LatLng(24.906308, 91.870413),
+        styles: [{
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [{"color": "#e9e9e9"}, {"lightness": 17}]
+        },
+            {
+                "featureType": "landscape",
+                "elementType": "geometry",
+                "stylers": [{"color": "#f5f5f5"}, {"lightness": 20}]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry.fill",
+                "stylers": [{"color": "#ffffff"}, {"lightness": 17}]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry.stroke",
+                "stylers": [{"color": "#ffffff"}, {"lightness": 29}, {"weight": 0.2}]
+            },
+            {
+                "featureType": "road.arterial",
+                "elementType": "geometry",
+                "stylers": [{"color": "#ffffff"}, {"lightness": 18}]
+            },
+            {
+                "featureType": "road.local",
+                "elementType": "geometry",
+                "stylers": [{"color": "#ffffff"}, {"lightness": 16}]
+            },
+            {"featureType": "poi", "elementType": "geometry", "stylers": [{"color": "#f5f5f5"}, {"lightness": 21}]},
+            {
+                "featureType": "poi.park",
+                "elementType": "geometry",
+                "stylers": [{"color": "#dedede"}, {"lightness": 21}]
+            },
+            {
+                "elementType": "labels.text.stroke",
+                "stylers": [{"visibility": "on"}, {"color": "#ffffff"}, {"lightness": 16}]
+            },
+            {
+                "elementType": "labels.text.fill",
+                "stylers": [{"saturation": 36}, {"color": "#333333"}, {"lightness": 40}]
+            },
+            {"elementType": "labels.icon", "stylers": [{"visibility": "off"}]}, {
+                "featureType": "transit", "elementType": "geometry", "stylers": [{"color": "#f2f2f2"},
+                    {"lightness": 19}]
+            }, {
+                "featureType": "administrative",
+                "elementType": "geometry.fill",
+                "stylers": [{"color": "#fefefe"}, {"lightness": 20}]
+            },
+            {
+                "featureType": "administrative",
+                "elementType": "geometry.stroke",
+                "stylers": [{"color": "#fefefe"}, {"lightness": 17}, {"weight": 1.2}]
+            }]
+    };
+    let mapElement = document.getElementById('map');
+    let map = new google.maps.Map(mapElement, mapOptions);
+    let marker = new google.maps.Marker({
+        position: new google.maps.LatLng(24.906308, 91.870413),
+        map: map,
+        title: '24 Golden Tower (2nd floor), Amborkhana, Sylhet.!'
+    });
+}
+
