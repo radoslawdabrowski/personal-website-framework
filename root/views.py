@@ -11,3 +11,19 @@ def sidebar_view_content():
 
 def footer_view_content():
     return {}
+
+
+def social_view_content():
+    return {}
+
+
+def description_view_content():
+    return {}
+
+
+def mobile_view_content():
+    return {}
+
+
+def email_view_content():
+    return {}
