@@ -1,13 +1,21 @@
-<div class="row">
-    <!-- ===== Navigation ===== -->
+{% load static from staticfiles %}
+<!-- ===== Navigation ===== -->
+<div class=" nav-icon">
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Logo</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
-                <li><a href="collapsible.html">JavaScript</a></li>
+            <ul id="nav-mobile" class="side-nav">
+                <li>
+                    <a href="#" class="center">
+                        <img src="{% static 'images/logo_black.png' %}" class="logo-image" alt="logo">
+                    </a>
+                </li>
+                <li><a href="index.html">Resume</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="cover-latter.html">Cover Latter</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse  "><i class="mdi-navigation-menu"></i></a>
         </div>
     </nav>
 </div>

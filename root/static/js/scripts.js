@@ -3402,8 +3402,8 @@ $(document).ready(function () {
     /***************************************************************************/
     /* NAVIGATION  */
     /***************************************************************************/
-
     $('.button-collapse').sideNav();
+
 
     /**************************************************************************
      SKILL BAR
@@ -3644,7 +3644,6 @@ function init() {
         title: '24 Golden Tower (2nd floor), Amborkhana, Sylhet.!'
     });
 }
-
 
 
 //# sourceMappingURL=scripts.js.map
