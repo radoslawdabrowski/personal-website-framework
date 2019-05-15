@@ -49,10 +49,14 @@
         {% sidebar %}
         <!-- ===== Content ===== -->
         <section class="col s12 m12 l8 section">
-            {% get_no_content as no_content %}
-            {% block content %}
-                {{ no_content }}
-            {% endblock %}
+            <div class="row">
+                {% get_no_content as no_content %}
+                {% block content %}
+                    {{ no_content }}
+                {% endblock %}
+
+                {% footer %}
+            </div>
         </section>
     </div>
 </div>

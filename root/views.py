@@ -8,3 +8,6 @@ def navigation_view_content():
 def sidebar_view_content():
     return {}
 
+
+def footer_view_content():
+    return {}
