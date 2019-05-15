@@ -27,3 +27,7 @@ def mobile_view_content():
 
 def email_view_content():
     return {}
+
+
+def header_view_content():
+    return {}

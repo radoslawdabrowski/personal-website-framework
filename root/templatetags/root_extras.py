@@ -2,7 +2,7 @@ from django import template
 from django.utils.translation import ugettext as _
 
 from root.views import navigation_view_content, sidebar_view_content, footer_view_content, social_view_content
-from root.views import description_view_content, mobile_view_content, email_view_content
+from root.views import description_view_content, mobile_view_content, email_view_content, header_view_content
 from attributes.models import AttributeEntity, SocialEntity
 
 register = template.Library()
@@ -36,6 +36,11 @@ def description():
 @register.inclusion_tag('components/extra/mobile.html')
 def mobile():
     return mobile_view_content()
+
+
+@register.inclusion_tag('components/extra/header.html')
+def header():
+    return header_view_content()
 
 
 @register.inclusion_tag('components/extra/email.html')
