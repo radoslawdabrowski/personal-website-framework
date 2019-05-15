@@ -263,6 +263,16 @@ body {
     &:first-child {
       margin-top: 30px;
     }
+
+    &.links {
+      padding-top: 20px;
+
+      .social {
+        margin-left: 12px;
+        margin-bottom: 4px;
+      }
+    }
+
   }
 
   .section-item-details {
@@ -865,6 +875,40 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
   }
 }
 
-nav {
-  background-color: @main-color;
+.logo-image {
+  display: block;
+  height: 64px;
+  margin: 20px auto;
+}
+
+.skill-line {
+  padding-right: 30px;
+  padding-left: 0;
+
+  .progress {
+    background-color: @main-color;
+    height: 2px;
+    overflow: visible;
+  }
+
+  .determinate {
+    background-color: @border-color;
+
+    .fa {
+      font-size: 12px;
+      position: absolute;
+      top: -5px;
+      right: 0;
+      margin-left: 50%;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  span {
+    opacity: initial;
+  }
 }
