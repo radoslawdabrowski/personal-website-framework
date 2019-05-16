@@ -112,3 +112,4 @@ venv.bak/
 */static/**/*.css*
 assets/libs/fontawesome*
 public/*
+README.html
