@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-24 11:43+0200\n"
+"POT-Creation-Date: 2019-05-16 15:28+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,39 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: .\cv\templates\components\about.html:12
-msgid "get my resume"
-msgstr ""
-
-#: .\cv\templates\components\about.html:13
-#: .\root\templates\components\sidebar.html:11
-msgid "Contact"
-msgstr ""
-
-#: .\cv\templates\components\education.html:6
-#: .\root\templates\components\sidebar.html:7
-msgid "Education"
-msgstr ""
-
-#: .\cv\templates\components\education.html:21
-#: .\cv\templates\components\experience.html:20
-msgid "Now"
-msgstr ""
-
-#: .\cv\templates\components\experience.html:5
-#: .\root\templates\components\sidebar.html:9
-msgid "Experience"
-msgstr ""
-
-#: .\cv\templates\components\interests.html:5
-msgid "Interests"
-msgstr ""
-
-#: .\cv\templates\components\skills.html:5
-#: .\root\templates\components\sidebar.html:8
-msgid "Skills"
-msgstr ""
 
 #: .\public_python\settings.py:117
 msgid "English"
@@ -66,26 +33,10 @@ msgstr ""
 msgid "French"
 msgstr ""
 
-#: .\root\templates\components\footer.html:10
-msgid "All right reserved"
-msgstr ""
-
-#: .\root\templates\components\sidebar.html:5
-msgid "Homepage"
-msgstr ""
-
-#: .\root\templates\components\sidebar.html:6
-msgid "About"
-msgstr ""
-
-#: .\root\templates\components\sidebar.html:10
-msgid "Interest"
-msgstr ""
-
-#: .\root\templatetags\root_extras.py:46
+#: .\root\templatetags\root_extras.py:71
 msgid "Comming back soon"
 msgstr ""
 
-#: .\root\templatetags\root_extras.py:51
-msgid "Java Developer"
+#: .\root\utils.py:11
+msgid "No Attribute"
 msgstr ""

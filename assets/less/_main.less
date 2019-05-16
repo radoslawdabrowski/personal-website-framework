@@ -46,6 +46,7 @@ Primary use:	CV/Resume, Portfolio, Perosnal Website
 @main-color: #1976D2;
 @border-color: #12579b;
 @font-color: #767270;
+@light-hr-border: #bdbdbd;
 
 
 * {
@@ -226,6 +227,11 @@ body {
             }
           }
 
+          &.side-nav-logo {
+            border-bottom: 1px solid @light-hr-border;
+            padding-bottom: 20px;
+          }
+
           &:hover {
             background-color: transparent !important;
           }
@@ -401,7 +407,7 @@ body {
 .custom-content-wrapper {
   padding-right: 30px;
   margin-bottom: 25px;
-  border-bottom: 1px solid #bdbdbd;
+  border-bottom: 1px solid @light-hr-border;
 
   &:last-child {
     border-bottom: initial;
@@ -756,7 +762,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
       text-transform: uppercase;
 
       &:hover {
-        border-bottom: 1px solid #bdbdbd;
+        border-bottom: 1px solid @light-hr-border;
       }
     }
   }

@@ -5,6 +5,8 @@ from root.views import navigation_view_context, sidebar_view_context, footer_vie
 from root.views import description_view_context, mobile_view_context, email_view_context, header_view_context
 from attributes.models import Attribute, Social
 
+from root.utils import get_attribute
+
 register = template.Library()
 
 
@@ -50,17 +52,17 @@ def email():
 
 @register.simple_tag
 def get_website_title():
-    return Attribute.objects.filter(key="ATTRIBUTE_WEBSITE_TITLE").get()
+    return get_attribute('ATTRIBUTE_WEBSITE_TITLE')
 
 
 @register.simple_tag
 def get_description():
-    return Attribute.objects.filter(key="ATTRIBUTE_WEBSITE_DESC").get()
+    return get_attribute('ATTRIBUTE_WEBSITE_DESC')
 
 
 @register.simple_tag
 def get_keywords():
-    return Attribute.objects.filter(key="ATTRIBUTE_WEBSITE_KEYWORDS").get()
+    return get_attribute('ATTRIBUTE_WEBSITE_KEYWORDS')
 
 
 @register.simple_tag
@@ -70,27 +72,27 @@ def get_no_content():
 
 @register.simple_tag
 def get_position():
-    return Attribute.objects.filter(key="ATTRIBUTE_JOB_POSITION").get()
+    return get_attribute('ATTRIBUTE_JOB_POSITION')
 
 
 @register.simple_tag
 def get_name():
-    return Attribute.objects.filter(key="ATTRIBUTE_NAME").get()
+    return get_attribute('ATTRIBUTE_NAME')
 
 
 @register.simple_tag
 def get_email():
-    return Attribute.objects.filter(key="ATTRIBUTE_EMAIL").get()
+    return get_attribute('ATTRIBUTE_EMAIL')
 
 
 @register.simple_tag
 def get_phone():
-    return Attribute.objects.filter(key="ATTRIBUTE_PHONE").get()
+    return get_attribute('ATTRIBUTE_PHONE')
 
 
 @register.simple_tag
 def get_website():
-    return Attribute.objects.filter(key="ATTRIBUTE_WEBSITE").get()
+    return get_attribute('ATTRIBUTE_WEBSITE')
 
 
 @register.simple_tag
