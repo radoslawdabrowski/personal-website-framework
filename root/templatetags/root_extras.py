@@ -1,8 +1,8 @@
 from django import template
 from django.utils.translation import ugettext as _
 
-from root.views import navigation_view_content, sidebar_view_content, footer_view_content, social_view_content
-from root.views import description_view_content, mobile_view_content, email_view_content, header_view_content
+from root.views import navigation_view_context, sidebar_view_context, footer_view_context, social_view_context
+from root.views import description_view_context, mobile_view_context, email_view_context, header_view_context
 from attributes.models import AttributeEntity, SocialEntity
 
 register = template.Library()
@@ -10,42 +10,42 @@ register = template.Library()
 
 @register.inclusion_tag('components/nav.html')
 def navigation():
-    return navigation_view_content()
+    return navigation_view_context()
 
 
 @register.inclusion_tag('components/sidebar.html')
 def sidebar():
-    return sidebar_view_content()
+    return sidebar_view_context()
 
 
 @register.inclusion_tag('components/footer.html')
 def footer():
-    return footer_view_content()
+    return footer_view_context()
 
 
 @register.inclusion_tag('components/extra/social.html')
 def social():
-    return social_view_content()
+    return social_view_context()
 
 
 @register.inclusion_tag('components/extra/description.html')
 def description():
-    return description_view_content()
+    return description_view_context()
 
 
 @register.inclusion_tag('components/extra/mobile.html')
 def mobile():
-    return mobile_view_content()
+    return mobile_view_context()
 
 
 @register.inclusion_tag('components/extra/header.html')
 def header():
-    return header_view_content()
+    return header_view_context()
 
 
 @register.inclusion_tag('components/extra/email.html')
 def email():
-    return email_view_content()
+    return email_view_context()
 
 
 @register.simple_tag

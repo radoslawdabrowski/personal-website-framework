@@ -1,33 +1,33 @@
 from django.shortcuts import render
 
 
-def navigation_view_content():
+def navigation_view_context():
     return {}
 
 
-def sidebar_view_content():
+def sidebar_view_context():
     return {}
 
 
-def footer_view_content():
+def footer_view_context():
     return {}
 
 
-def social_view_content():
+def social_view_context():
     return {}
 
 
-def description_view_content():
+def description_view_context():
     return {}
 
 
-def mobile_view_content():
+def mobile_view_context():
     return {}
 
 
-def email_view_content():
+def email_view_context():
     return {}
 
 
-def header_view_content():
+def header_view_context():
     return {}
