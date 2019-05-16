@@ -3402,7 +3402,7 @@ $(document).ready(function () {
     /***************************************************************************/
     /* NAVIGATION  */
     /***************************************************************************/
-    $('.button-collapse').sideNav();
+    $(".button-collapse").sideNav();
 
 
     /**************************************************************************
@@ -3423,25 +3423,25 @@ $(document).ready(function () {
 
     jQuery(window).on('load', function () {
         let $ = jQuery;
-        $('.blog').masonry({
-            itemSelector: '.blog-post',
-            columnWidth: '.blog-post',
+        $(".blog").masonry({
+            itemSelector: ".blog-post",
+            columnWidth: ".blog-post",
             percentPosition: true
         });
     });
 
 
-    let height = $('.caption').height();
+    let height = $(".caption").height();
     if ($(window).width()) {
-        $('#featured').css('height', height);
-        $('#featured img').css('height', height);
+        $("#featured").css('height', height);
+        $("#featured img").css('height', height);
     }
 
 
     /*************************************************************************
      TOOLTIP
      **************************************************************************/
-    $('.tooltipped').tooltip({delay: 50});
+    $(".tooltipped").tooltip({delay: 50});
 
     /**************************************************************************
      WOW INIT
@@ -3449,21 +3449,30 @@ $(document).ready(function () {
     const wow = new WOW({mobile: false});
     wow.init();
 
+    function submitMSG(valid, msg) {
+        let msgClasses;
+        if (valid) {
+            msgClasses = "h3 text-center fadeInUp animated text-success";
+        } else {
+            msgClasses = "h3 text-center text-danger";
+        }
+        $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+    }
+
     /***************************************************************************
      CONTACT FORM
      ***************************************************************************/
+    function formSuccess() {
+        $("#contactForm")[0].reset();
+        submitMSG(true, "Message Sent!")
+    }
 
-    $("#contactForm").validator().on("submit", function (event) {
-        if (event.isDefaultPrevented()) {
-            // handle the invalid form...
-            formError();
-            submitMSG(false, "Did you fill in the form properly?");
-        } else {
-            // everything looks good!
-            event.preventDefault();
-            submitForm();
-        }
-    });
+    function formError() {
+        $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+            function () {
+                $(this).removeClass();
+            });
+    }
 
     function submitForm() {
         // Initiate Variables With Form Content
@@ -3486,43 +3495,32 @@ $(document).ready(function () {
         });
     }
 
-    function formSuccess() {
-        $("#contactForm")[0].reset();
-        submitMSG(true, "Message Sent!")
-    }
-
-    function formError() {
-        $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
-            function () {
-                $(this).removeClass();
-            });
-    }
-
-    function submitMSG(valid, msg) {
-        let msgClasses;
-        if (valid) {
-            msgClasses = "h3 text-center fadeInUp animated text-success";
+    $("#contactForm").validator().on("submit", function (event) {
+        if (event.isDefaultPrevented()) {
+            // handle the invalid form...
+            formError();
+            submitMSG(false, "Did you fill in the form properly?");
         } else {
-            msgClasses = "h3 text-center text-danger";
+            // everything looks good!
+            event.preventDefault();
+            submitForm();
         }
-        $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
-    }
-
+    });
 
     /**************************************************************************
      Projects
      **************************************************************************/
     // $('#portfolio-item').mixItUp();
 
-    $('.sa-view-project-detail').on('click', function (event) {
+    $(".sa-view-project-detail").on('click', function (event) {
         event.preventDefault();
         let href = $(this).attr('href') + ' ' + $(this).attr('data-action'),
-            dataShow = $('#project-gallery-view'),
-            dataShowMeta = $('#project-gallery-view meta'),
-            dataHide = $('#portfolio-item'),
-            preLoader = $('#loader'),
-            backBtn = $('#back-button'),
-            filterBtn = $('#filter-button');
+            dataShow = $("#project-gallery-view"),
+            dataShowMeta = $("#project-gallery-view meta"),
+            dataHide = $("#portfolio-item"),
+            preLoader = $("#loader"),
+            backBtn = $("#back-button"),
+            filterBtn = $("#filter-button");
 
         dataHide.animate({'marginLeft': '-120%'}, {duration: 400, queue: false});
         filterBtn.animate({'marginLeft': '-120%'}, {duration: 400, queue: false});
@@ -3541,11 +3539,11 @@ $(document).ready(function () {
         }, 800);
     });
 
-    $('#back-button').on('click', function (event) {
+    $("#back-button").on('click', function (event) {
         event.preventDefault();
-        let dataShow = $('#portfolio-item'),
-            dataHide = $('#project-gallery-view'),
-            filterBtn = $('#filter-button');
+        let dataShow = $("#portfolio-item"),
+            dataHide = $("#project-gallery-view"),
+            filterBtn = $("#filter-button");
 
         $("[data-animate]").each(function () {
             $(this).addClass($(this).attr('data-animate'));
