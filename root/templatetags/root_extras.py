@@ -3,7 +3,7 @@ from django.utils.translation import ugettext as _
 
 from root.views import navigation_view_context, sidebar_view_context, footer_view_context, social_view_context
 from root.views import description_view_context, mobile_view_context, email_view_context, header_view_context
-from attributes.models import AttributeEntity, SocialEntity
+from attributes.models import Attribute, Social
 
 register = template.Library()
 
@@ -50,17 +50,17 @@ def email():
 
 @register.simple_tag
 def get_website_title():
-    return AttributeEntity.objects.filter(key="ATTRIBUTE_WEBSITE_TITLE").get()
+    return Attribute.objects.filter(key="ATTRIBUTE_WEBSITE_TITLE").get()
 
 
 @register.simple_tag
 def get_description():
-    return AttributeEntity.objects.filter(key="ATTRIBUTE_WEBSITE_DESC").get()
+    return Attribute.objects.filter(key="ATTRIBUTE_WEBSITE_DESC").get()
 
 
 @register.simple_tag
 def get_keywords():
-    return AttributeEntity.objects.filter(key="ATTRIBUTE_WEBSITE_KEYWORDS").get()
+    return Attribute.objects.filter(key="ATTRIBUTE_WEBSITE_KEYWORDS").get()
 
 
 @register.simple_tag
@@ -70,32 +70,32 @@ def get_no_content():
 
 @register.simple_tag
 def get_position():
-    return AttributeEntity.objects.filter(key="ATTRIBUTE_JOB_POSITION").get()
+    return Attribute.objects.filter(key="ATTRIBUTE_JOB_POSITION").get()
 
 
 @register.simple_tag
 def get_name():
-    return AttributeEntity.objects.filter(key="ATTRIBUTE_NAME").get()
+    return Attribute.objects.filter(key="ATTRIBUTE_NAME").get()
 
 
 @register.simple_tag
 def get_email():
-    return AttributeEntity.objects.filter(key="ATTRIBUTE_EMAIL").get()
+    return Attribute.objects.filter(key="ATTRIBUTE_EMAIL").get()
 
 
 @register.simple_tag
 def get_phone():
-    return AttributeEntity.objects.filter(key="ATTRIBUTE_PHONE").get()
+    return Attribute.objects.filter(key="ATTRIBUTE_PHONE").get()
 
 
 @register.simple_tag
 def get_website():
-    return AttributeEntity.objects.filter(key="ATTRIBUTE_WEBSITE").get()
+    return Attribute.objects.filter(key="ATTRIBUTE_WEBSITE").get()
 
 
 @register.simple_tag
 def get_social():
-    return SocialEntity.objects.all()
+    return Social.objects.all()
     # return [
     #     {
     #         'icon': 'fa-linkedin-in',
