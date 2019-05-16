@@ -110,6 +110,9 @@ venv.bak/
 .vscode/
 
 */static/**/*.css*
+*/static/**/*.js*
+*/static/**/*.map*
 assets/libs/fontawesome*
 public/*
-README.html
+
+*README.html

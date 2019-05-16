@@ -23,7 +23,7 @@ $(document).ready(function () {
      BLOG POST
      **************************************************************************/
 
-    jQuery(window).on('load', function () {
+    jQuery(window).on("load", function () {
         let $ = jQuery;
         $(".blog").masonry({
             itemSelector: ".blog-post",
@@ -35,8 +35,8 @@ $(document).ready(function () {
 
     let height = $(".caption").height();
     if ($(window).width()) {
-        $("#featured").css('height', height);
-        $("#featured img").css('height', height);
+        $("#featured").css("height", height);
+        $("#featured img").css("height", height);
     }
 
 
@@ -70,7 +70,7 @@ $(document).ready(function () {
     }
 
     function formError() {
-        $("#contactForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+        $("#contactForm").removeClass().addClass("shake animated").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
             function () {
                 $(this).removeClass();
             });
@@ -112,11 +112,11 @@ $(document).ready(function () {
     /**************************************************************************
      Projects
      **************************************************************************/
-    // $('#portfolio-item').mixItUp();
+    // $("#portfolio-item").mixItUp();
 
-    $(".sa-view-project-detail").on('click', function (event) {
+    $(".sa-view-project-detail").on("click", function (event) {
         event.preventDefault();
-        let href = $(this).attr('href') + ' ' + $(this).attr('data-action'),
+        let href = $(this).attr("href") + " " + $(this).attr("data-action"),
             dataShow = $("#project-gallery-view"),
             dataShowMeta = $("#project-gallery-view meta"),
             dataHide = $("#portfolio-item"),
@@ -124,8 +124,8 @@ $(document).ready(function () {
             backBtn = $("#back-button"),
             filterBtn = $("#filter-button");
 
-        dataHide.animate({'marginLeft': '-120%'}, {duration: 400, queue: false});
-        filterBtn.animate({'marginLeft': '-120%'}, {duration: 400, queue: false});
+        dataHide.animate({"marginLeft": "-120%"}, {duration: 400, queue: false});
+        filterBtn.animate({"marginLeft": "-120%"}, {duration: 400, queue: false});
         dataHide.fadeOut(400);
         filterBtn.fadeOut(400);
         setTimeout(function () {
@@ -141,26 +141,26 @@ $(document).ready(function () {
         }, 800);
     });
 
-    $("#back-button").on('click', function (event) {
+    $("#back-button").on("click", function (event) {
         event.preventDefault();
         let dataShow = $("#portfolio-item"),
             dataHide = $("#project-gallery-view"),
             filterBtn = $("#filter-button");
 
         $("[data-animate]").each(function () {
-            $(this).addClass($(this).attr('data-animate'));
+            $(this).addClass($(this).attr("data-animate"));
         });
 
         dataHide.fadeOut(400);
         $(this).fadeOut(400);
         setTimeout(function () {
-            dataShow.animate({'marginLeft': '0'}, {duration: 400, queue: false});
-            filterBtn.animate({'marginLeft': '0'}, {duration: 400, queue: false});
+            dataShow.animate({"marginLeft": "0"}, {duration: 400, queue: false});
+            filterBtn.animate({"marginLeft": "0"}, {duration: 400, queue: false});
             dataShow.fadeIn(400);
             filterBtn.fadeIn(400);
         }, 400);
         setTimeout(function () {
-            dataShow.find('.fadeInRight, .fadeInLeft, .fadeInUp, .fadeInDown').removeClass('fadeInRight').removeClass('fadeInLeft').removeClass('fadeInUp').removeClass('fadeInDown');
+            dataShow.find(".fadeInRight, .fadeInLeft, .fadeInUp, .fadeInDown").removeClass("fadeInRight").removeClass("fadeInLeft").removeClass("fadeInUp").removeClass("fadeInDown");
         }, 1500);
     });
 
@@ -170,7 +170,7 @@ $(document).ready(function () {
  MAP
  ***************************************************************************/
 
-google.maps.event.addDomListener(window, 'load', init);
+google.maps.event.addDomListener(window, "load", init);
 
 function init() {
     const mapOptions = {
@@ -236,11 +236,11 @@ function init() {
                 "stylers": [{"color": "#fefefe"}, {"lightness": 17}, {"weight": 1.2}]
             }]
     };
-    let mapElement = document.getElementById('map');
-    let map = new google.maps.Map(mapElement, mapOptions);
-    let marker = new google.maps.Marker({
-        position: new google.maps.LatLng(24.906308, 91.870413),
-        map: map,
-        title: '24 Golden Tower (2nd floor), Amborkhana, Sylhet.!'
-    });
+    // let mapElement = document.getElementById("map");
+    // let map = new google.maps.Map(mapElement, mapOptions);
+    // let marker = new google.maps.Marker({
+    //     position: new google.maps.LatLng(24.906308, 91.870413),
+    //     map: map,
+    //     title: "24 Golden Tower (2nd floor), Amborkhana, Sylhet.!"
+    // });
 }
