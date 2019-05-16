@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Skill, Hobby
+
+admin.site.register(Hobby)
+admin.site.register(Skill)

@@ -1,6 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
-from .models import AttributeEntity
+from .models import Attribute
 
-admin.site.register(AttributeEntity)
+admin.site.register(Attribute)
