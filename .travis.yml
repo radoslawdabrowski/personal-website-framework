@@ -21,6 +21,8 @@ script:
   - python manage.py makemigrations
   - python manage.py migrate
   - python manage.py test
+  - coverage run --source='.' manage.py test root
+  - coverage xml
   
 after_success:
  - python-codacy-coverage -r coverage.xml
