@@ -15,13 +15,12 @@ install:
   - pip install -r requirements.txt
   - pip install django==$DJANGO --quiet
   - pip install psycopg2 --quiet
-  - pip install codecov
+  - pip install codacy-coverage
 
 script:
   - python manage.py makemigrations
   - python manage.py migrate
   - python manage.py test
-  - coverage run tests.py
   
 after_success:
- - codecov
+ - python-codacy-coverage -r coverage.xml
