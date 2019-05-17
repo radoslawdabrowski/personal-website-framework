@@ -3,6 +3,7 @@ from django.utils.translation import ugettext as _
 
 from cv.views import education_view_context, experience_view_context, interests_view_context, skills_view_context
 from cv.views import skill_view_context, school_view_context, hobby_view_context, job_view_context
+from cv.views import date_view_context
 
 register = template.Library()
 
@@ -49,3 +50,9 @@ def skill(item, wow=2):
 
 def divide(value, divide_by):
     return float(value) / divide_by
+
+
+@register.inclusion_tag('components/cv/utils/date.html')
+def date(start, end):
+    return date_view_context(start, end)
+

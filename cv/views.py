@@ -10,7 +10,7 @@ def cv_view(request, *args, **kwargs):
 
 def education_view_context():
     return {
-        "schools": Job.objects.all().order_by("-start_date")
+        "schools": School.objects.all().order_by("-start_date")
     }
 
 
@@ -54,4 +54,11 @@ def job_view_context(job, wow):
 def hobby_view_context(hobby):
     return {
         'item': hobby
+    }
+
+
+def date_view_context(start, end):
+    return {
+        "start_date": start,
+        "end_date": end
     }

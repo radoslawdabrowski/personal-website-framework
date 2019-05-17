@@ -1,9 +1,6 @@
-{% load i18n %}
+{% load cv_extras %}
 <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="{{ wow }}">
     <h3>{{ item.position }} <span>@{{ item.company.name }}</span></h3>
-    {% trans "Now" as now %}
-    {% with ed=item.end_date|date:'b Y' %}
-        <span>{{ item.start_date | date:'b Y' }} - {{ ed | default:now }} </span>
-    {% endwith %}
+    {% date start=item.start_date end=item.end_date %}
     <p>{{ item.description | safe }}</p>
 </div>

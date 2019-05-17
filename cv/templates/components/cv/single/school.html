@@ -1,6 +1,6 @@
+{% load cv_extras %}
 <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="{{ wow }}">
-    <h3>Art & Multimedia <span>@Oxford University</span></h3>
-    <span>JAN 2013 - DEC 2013 </span>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua. </p>
+    <h3>{{ item.direction }} <span>@{{ item.school.name }}</span></h3>
+    {% date start=item.start_date end=item.end_date %}
+    <p>{{ item.description | safe }}</p>
 </div>
