@@ -18,6 +18,7 @@ install:
   - pip install codacy-coverage
 
 script:
+  - python manage.py compilemessages
   - python manage.py makemigrations
   - python manage.py migrate
   - python manage.py test
