@@ -120,7 +120,7 @@ LANGUAGES = (
     ('fr', _('French'))
 )
 
-TIME_ZONE = 'UTC+1'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 

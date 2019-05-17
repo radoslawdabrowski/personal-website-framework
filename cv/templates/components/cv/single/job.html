@@ -1,5 +1,9 @@
+{% load i18n %}
 <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="{{ wow }}">
     <h3>{{ item.position }} <span>@{{ item.company.name }}</span></h3>
-    <span>{{ item.start_date | date:'b Y' }} - {{ item.end_date }} </span>
+    {% trans "Now" as now %}
+    {% with ed=item.end_date|date:'b Y' %}
+        <span>{{ item.start_date | date:'b Y' }} - {{ ed | default:now }} </span>
+    {% endwith %}
     <p>{{ item.description | safe }}</p>
 </div>
