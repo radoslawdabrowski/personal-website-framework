@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from attributes.models import Social
+
 
 def navigation_view_context():
     return {}
@@ -14,7 +16,9 @@ def footer_view_context():
 
 
 def social_view_context():
-    return {}
+    return {
+        "social": Social.objects.all()
+    }
 
 
 def description_view_context():

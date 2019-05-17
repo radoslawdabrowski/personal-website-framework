@@ -9,3 +9,9 @@ def get_attribute(name):
         return Attribute.objects.filter(key=name).get()
     except ObjectDoesNotExist:
         return _('No Attribute')
+
+
+# splitting list into 2 equal parts
+def split_list(a_list):
+    half = len(a_list)//2
+    return a_list[half:], a_list[:half]

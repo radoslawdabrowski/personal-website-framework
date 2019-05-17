@@ -1,3 +1,5 @@
+{% load root_extras %}
+{% load i18n %}
 <!-- ===== Mobile ===== -->
 <div class="row">
     <div class="col m12 s12 l3 icon">
@@ -6,12 +8,8 @@
     <div class="col m12 s12 l9 info wow fadeIn a2" data-wow-delay="0.2s">
         <div class="section-item-details">
             <div class="personal">
-                <h4><a href="tel:555-555-5555">(111)-333-4444</a></h4>
-                <span>mobile</span>
-            </div>
-            <div class="work">
-                <h4><a href="tel:555-555-5555">(121)-323-3494</a></h4>
-                <span>work</span>
+                <h4><a href="tel:{% get_phone %}">{% get_phone %}</a></h4>
+                <span>{% trans 'mobile' %}</span>
             </div>
         </div>
     </div>

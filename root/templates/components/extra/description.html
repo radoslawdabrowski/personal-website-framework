@@ -1,3 +1,4 @@
+{% load root_extras %}
 <!-- ===== Description ===== -->
 <div class="row">
     <div class="col m12 s12 l3 icon">
@@ -5,10 +6,7 @@
     </div>
     <div class="col m12 s12 l9 info wow fadeIn a1" data-wow-delay="0.1s">
         <div class="section-item-details">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et
-                dolore magna aliqua . Ld do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua</p>
+            <p>{% get_description %}</p>
         </div>
     </div>
 </div>

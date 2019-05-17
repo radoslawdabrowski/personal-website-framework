@@ -56,11 +56,6 @@ def get_website_title():
 
 
 @register.simple_tag
-def get_description():
-    return get_attribute('ATTRIBUTE_WEBSITE_DESC')
-
-
-@register.simple_tag
 def get_keywords():
     return get_attribute('ATTRIBUTE_WEBSITE_KEYWORDS')
 
@@ -68,6 +63,11 @@ def get_keywords():
 @register.simple_tag
 def get_no_content():
     return _('Comming back soon')
+
+
+@register.simple_tag
+def get_description():
+    return get_attribute('ATTRIBUTE_DESCRIPTION')
 
 
 @register.simple_tag
@@ -94,30 +94,4 @@ def get_phone():
 def get_website():
     return get_attribute('ATTRIBUTE_WEBSITE')
 
-
-@register.simple_tag
-def get_social():
-    return Social.objects.all()
-    # return [
-    #     {
-    #         'icon': 'fa-linkedin-in',
-    #         'url': 'https://www.linkedin.com/in/dabrowskiradoslaw',
-    #         'color': 'blue darken-3'
-    #     },
-    #     {
-    #         'icon': 'fa-github',
-    #         'url': 'https://github.com/radoslawdabrowski',
-    #         'color': 'grey darken-3'
-    #     },
-    #     {
-    #         'icon': 'fa-stack-overflow',
-    #         'url': 'https://stackoverflow.com/users/4693532/humblehunter',
-    #         'color': 'orange darken-2'
-    #     },
-    #     {
-    #         'icon': 'fa-codiepie',
-    #         'url': 'https://codeboards.io/profiles/93526',
-    #         'color': 'red darken-2'
-    #     }
-    # ]
 

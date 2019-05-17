@@ -1,3 +1,5 @@
+{% load i18n %}
+{% load root_extras %}
 <!-- ===== Email ===== -->
 <div class="row">
     <div class="col m12 s12 l3 icon">
@@ -6,12 +8,8 @@
     <div class="col m12 s12 l9 info wow fadeIn a3" data-wow-delay="0.3s">
         <div class="section-item-details">
             <div class="personal">
-                <h4><a href="mailto:someone@example.com">mail@alrayhan.com</a></h4>
-                <span>personal</span>
-            </div>
-            <div class="work">
-                <h4><a href="mailto:someone@example.com">ar@deviserweb.com</a></h4>
-                <span>work</span> <br>
+                <h4><a href="mailto:{% get_email %}">{% get_email %}</a></h4>
+                <span>{% trans "work" %}</span>
             </div>
         </div>
     </div>

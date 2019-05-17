@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 from attributes.models import Attribute
 from .models import Hobby, Job, School, Skill
+from root.utils import split_list
 
 
 def cv_view(request, *args, **kwargs):
@@ -22,18 +23,23 @@ def experience_view_context():
 
 def interests_view_context():
     return {
-        "hobbies": Hobby.objects.all()
+        'hobbies': Hobby.objects.all()
     }
 
 
 def skills_view_context():
-    return {}
+    skills = Skill.objects.all().order_by('category')
+    first_column, second_column = split_list(skills)
 
-
-def skill_view_context(skill, wow):
     return {
-        'item': skill,
-        'wow': wow
+        'first_column': first_column,
+        'second_column': second_column
+    }
+
+
+def skill_view_context(skill):
+    return {
+        'item': skill
     }
 
 

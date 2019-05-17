@@ -44,8 +44,8 @@ def hobby(item):
 
 
 @register.inclusion_tag('components/cv/single/skill.html')
-def skill(item, wow=2):
-    return skill_view_context(item, divide(wow, 10))
+def skill(item):
+    return skill_view_context(item)
 
 
 def divide(value, divide_by):
