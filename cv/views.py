@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from attributes.models import Attribute
-from .models import Hobby
+from .models import Hobby, Job, School, Skill
 
 
 def cv_view(request, *args, **kwargs):
@@ -9,11 +9,15 @@ def cv_view(request, *args, **kwargs):
 
 
 def education_view_context():
-    return {}
+    return {
+        "schools": Job.objects.all().order_by("-start_date")
+    }
 
 
 def experience_view_context():
-    return {}
+    return {
+        'jobs': Job.objects.all().order_by("-start_date")
+    }
 
 
 def interests_view_context():

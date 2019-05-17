@@ -28,13 +28,13 @@ def skills():
 
 
 @register.inclusion_tag('components/cv/single/school.html')
-def school(item, wow=0.2):
-    return school_view_context(item, wow)
+def school(item, wow=2):
+    return school_view_context(item, divide(wow, 10))
 
 
 @register.inclusion_tag('components/cv/single/job.html')
-def job(item, wow=0.2):
-    return job_view_context(item, wow)
+def job(item, wow=2):
+    return job_view_context(item, divide(wow, 10))
 
 
 @register.inclusion_tag('components/cv/single/hobby.html')
@@ -43,5 +43,9 @@ def hobby(item):
 
 
 @register.inclusion_tag('components/cv/single/skill.html')
-def skill(item, wow=0.2):
-    return skill_view_context(item, wow)
+def skill(item, wow=2):
+    return skill_view_context(item, divide(wow, 10))
+
+
+def divide(value, divide_by):
+    return float(value) / divide_by
