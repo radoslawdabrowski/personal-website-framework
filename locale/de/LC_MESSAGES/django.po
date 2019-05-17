@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-17 11:21+0200\n"
+"POT-Creation-Date: 2019-05-17 13:17+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\cv\templates\components\cv\education.html:8
+msgid "Education"
+msgstr ""
 
 #: .\cv\templates\components\cv\experience.html:8
 msgid "Work Experience"
@@ -25,12 +29,12 @@ msgstr ""
 msgid "Interests"
 msgstr ""
 
-#: .\cv\templates\components\cv\single\job.html:4
-msgid "Now"
-msgstr ""
-
 #: .\cv\templates\components\cv\skills.html:8
 msgid "Skills"
+msgstr ""
+
+#: .\cv\templates\components\cv\utils\date.html:2
+msgid "Now"
 msgstr ""
 
 #: .\public_python\settings.py:117
@@ -49,7 +53,19 @@ msgstr ""
 msgid "French"
 msgstr ""
 
-#: .\root\templatetags\root_extras.py:70
+#: .\root\templates\components\extra\email.html:12
+msgid "work"
+msgstr ""
+
+#: .\root\templates\components\extra\mobile.html:12
+msgid "mobile"
+msgstr ""
+
+#: .\root\templates\components\footer.html:7
+msgid "All rights reserved"
+msgstr ""
+
+#: .\root\templatetags\root_extras.py:65
 msgid "Comming back soon"
 msgstr ""
 
