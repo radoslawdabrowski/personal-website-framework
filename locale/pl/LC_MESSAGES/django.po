@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-17 13:17+0200\n"
+"POT-Creation-Date: 2019-05-17 13:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,14 +24,10 @@ msgid "Education"
 msgstr "Edukacja"
 
 #: .\cv\templates\components\cv\experience.html:8
-#, fuzzy
-#| msgid "Experience"
 msgid "Work Experience"
 msgstr "Doświadczenie"
 
 #: .\cv\templates\components\cv\interests.html:8
-#, fuzzy
-#| msgid "Interest"
 msgid "Interests"
 msgstr "Zainteresowania"
 
@@ -61,15 +57,15 @@ msgstr "Francuski"
 
 #: .\root\templates\components\extra\email.html:12
 msgid "work"
-msgstr ""
+msgstr "służbowy"
 
 #: .\root\templates\components\extra\mobile.html:12
 msgid "mobile"
-msgstr ""
+msgstr "komórkowy"
 
 #: .\root\templates\components\footer.html:7
 msgid "All rights reserved"
-msgstr ""
+msgstr "Wszelkie prawa zastrzeżone"
 
 #: .\root\templatetags\root_extras.py:65
 msgid "Comming back soon"
@@ -285,10 +281,8 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:898
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1766
-#, fuzzy
-#| msgid "Interest"
 msgid "Integer"
-msgstr "Zainteresowania"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:902
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1764
