@@ -1,0 +1,5 @@
+{% load i18n %}
+{% trans "Now" as now %}
+{% with ed=end_date|date:'b Y' %}
+    <span>{{ start_date | date:'b Y' }} - {{ ed | default:now }} </span>
+{% endwith %}
