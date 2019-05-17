@@ -4,6 +4,6 @@ fontawesome-pro=5.7.2-web
 google-maps=3.0.0
 jquery=3.3.1
 masonry=3.3.0
-materialize=0.97.5
+materialize=1.0.0
 scroll-reveal=3.1.4
 wow=1.0.3
