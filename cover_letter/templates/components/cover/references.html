@@ -1,21 +1,15 @@
 {% load i18n %}
 {% load cover_extras %}
-<div class="section-wrapper refarances z-depth-1">
+<div class="section-wrapper references z-depth-1">
     <div class="row">
         <div class="section-icon col s12 m12 l2">
             <i class="fa fa-graduation-cap"></i>
         </div>
         <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s">
             <h2>{% trans 'References' %}</h2>
-
-            <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s">
-                <h3>Hasin Hayder</h3>
-                <span>Head of Ideas, Themebucket </span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
-            </div>
-
-
+            {% for referenceItem in references %}
+                {% reference item=referenceItem wow=forloop.counter %}
+            {% endfor %}
         </div>
     </div>
 </div>

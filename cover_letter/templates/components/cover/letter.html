@@ -1,32 +1,13 @@
+{% load i18n %}
 {% load root_extras %}
 <div class="cover-latter z-depth-1">
     <div class="cover-title">
         <span>{% now "d F Y" %}</span>
     </div>
-    <h4 class="cover-title">Dear Sir/Madam</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce urna velit, lacinia ac mauris in, dictum tristique
-        dolor.
-        Maecenas porttitor, elit a auctor tempor, libero nulla congue mi, et tempus nisl est ac orci. Cras faucibus
-        sodales risus a
-        consectetur. Sed tristique vitae quam a tincidunt. libero nulla congue mi, et tempus nisl est ac orci. Cras
-        faucibus sodales
-        risus a consectetur. Sed tristique vitae quam a tincidunt</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce urna velit, lacinia ac mauris in, dictum tristique
-        dolor.
-        Maecenas porttitor, elit a auctor tempor, libero nulla congue mi, et tempus nisl est ac orci. Cras faucibus
-        sodales risus a
-        consectetur. Sed tristique vitae quam a tincidunt.libero nulla congue mi, et tempus nisl est ac orci. Cras
-        faucibus sodales
-        risus a consectetur. Sed tristique vitae quam a tincidunt</p>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce urna velit, lacinia ac mauris in, dictum tristique
-        dolor.
-        Maecenas porttitor, elit a auctor tempor, libero nulla congue mi, et tempus nisl est ac orci. Cras faucibus
-        sodales risus a
-        consectetur. Sed tristique vitae quam a tincidunt</p>
+    <h4 class="cover-title">{% trans 'Dear Sir/Madam' %}</h4>
+    <p>{{ letter | safe }}</p>
     <div class="cover-title">
-        <p>Your Sincerely</p>
+        <p>{% trans 'Your Sincerely' %}</p>
     </div>
     <div class="signature">
         <h4>{% get_name %}</h4>
