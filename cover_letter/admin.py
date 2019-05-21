@@ -1,3 +1,6 @@
 from django.contrib import admin
+from cover_letter.models import Reference
 
-# Register your models here.
+
+# Entities
+admin.site.register(Reference)

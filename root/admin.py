@@ -1,3 +1,6 @@
 from django.contrib import admin
+from root.models import Company, SkillCategory
 
-# Register your models here.
+# Dictionaries
+admin.site.register(Company)
+admin.site.register(SkillCategory)
