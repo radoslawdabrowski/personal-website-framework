@@ -4,7 +4,7 @@ python: 3.7-dev
 services: mongodb
 
 env: 
- - DJANGO=2.1.7
+ - DJANGO=2.2.1
 
 before_install:
   - export DJANGO_SETTINGS_MODULE=public_python.settings  
