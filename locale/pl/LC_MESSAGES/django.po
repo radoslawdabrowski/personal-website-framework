@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-17 11:21+0200\n"
+"POT-Creation-Date: 2019-05-17 13:29+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,25 +19,25 @@ msgstr ""
 "100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%"
 "10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
+#: .\cv\templates\components\cv\education.html:8
+msgid "Education"
+msgstr "Edukacja"
+
 #: .\cv\templates\components\cv\experience.html:8
-#, fuzzy
-#| msgid "Experience"
 msgid "Work Experience"
 msgstr "Doświadczenie"
 
 #: .\cv\templates\components\cv\interests.html:8
-#, fuzzy
-#| msgid "Interest"
 msgid "Interests"
 msgstr "Zainteresowania"
-
-#: .\cv\templates\components\cv\single\job.html:4
-msgid "Now"
-msgstr "Obecnie"
 
 #: .\cv\templates\components\cv\skills.html:8
 msgid "Skills"
 msgstr "Umiejętności"
+
+#: .\cv\templates\components\cv\utils\date.html:2
+msgid "Now"
+msgstr "Obecnie"
 
 #: .\public_python\settings.py:117
 msgid "English"
@@ -55,7 +55,19 @@ msgstr "Niemiecki"
 msgid "French"
 msgstr "Francuski"
 
-#: .\root\templatetags\root_extras.py:70
+#: .\root\templates\components\extra\email.html:12
+msgid "work"
+msgstr "służbowy"
+
+#: .\root\templates\components\extra\mobile.html:12
+msgid "mobile"
+msgstr "komórkowy"
+
+#: .\root\templates\components\footer.html:7
+msgid "All rights reserved"
+msgstr "Wszelkie prawa zastrzeżone"
+
+#: .\root\templatetags\root_extras.py:65
 msgid "Comming back soon"
 msgstr "Wkrótce wracamy"
 
@@ -65,7 +77,7 @@ msgstr "Atrybut nie istnieje"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"
-msgstr ""
+msgstr "Wiadomości"
 
 #: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:7
 msgid "Site Maps"
@@ -269,10 +281,8 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:898
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1766
-#, fuzzy
-#| msgid "Interest"
 msgid "Integer"
-msgstr "Zainteresowania"
+msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:902
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1764

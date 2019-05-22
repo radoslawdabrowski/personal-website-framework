@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'root',
     'attributes',
     'cv',
-    # 'cover_letter',
+    'cover_letter',
     # 'blog',
     # 'portfolio',
     # 'contact'

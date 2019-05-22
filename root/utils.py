@@ -15,3 +15,8 @@ def get_attribute(name):
 def split_list(a_list):
     half = len(a_list)//2
     return a_list[half:], a_list[:half]
+
+
+# getting 0.# number for wow parameter based on record index
+def divide_index(value, divide_by):
+    return float(value) / divide_by
