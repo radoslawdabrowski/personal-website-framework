@@ -1,6 +1,21 @@
 $(document).ready(function () {
     "use strict";
 
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            let cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = jQuery.trim(cookies[i]);
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
     /***************************************************************************/
     /* NAVIGATION  */
     /***************************************************************************/
@@ -64,9 +79,9 @@ $(document).ready(function () {
     /***************************************************************************
      CONTACT FORM
      ***************************************************************************/
-    function formSuccess() {
+    function formSuccess(message) {
         $("#contactForm")[0].reset();
-        submitMSG(true, "Message Sent!")
+        submitMSG(true, message)
     }
 
     function formError() {
@@ -84,15 +99,24 @@ $(document).ready(function () {
 
         $.ajax({
             type: "POST",
-            url: "process.php",
-            data: "name=" + name + "&email=" + email + "&message=" + message,
+            url: "/contact/send/",
+            data: {
+                "name": name,
+                "email": email,
+                "message": message
+            },
+            dataType: 'json',
+            headers: {
+                "X-CSRFToken": getCookie("csrftoken")
+            },
             success: function (text) {
-                if (text === "success") {
-                    formSuccess();
-                } else {
-                    formError();
-                    submitMSG(false, text);
-                }
+                formSuccess(text);
+            },
+            error: function (errors) {
+                formError();
+                errors.responseJSON.forEach(error => {
+                    submitMSG(false, error[0])
+                })
             }
         });
     }
@@ -243,4 +267,6 @@ function init() {
     //     map: map,
     //     title: "24 Golden Tower (2nd floor), Amborkhana, Sylhet.!"
     // });
+
+
 }
