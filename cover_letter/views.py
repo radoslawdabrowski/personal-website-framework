@@ -4,7 +4,7 @@ from root.utils import get_attribute
 
 
 def cover_main_view(request, *args):
-    return render(request, "components/cover.html", {})
+    return render(request, "cover.html", {})
 
 
 def letter_view_context():
