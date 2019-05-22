@@ -4,6 +4,7 @@ from django.utils.translation import ugettext as _
 from cv.views import education_view_context, experience_view_context, interests_view_context, skills_view_context
 from cv.views import skill_view_context, school_view_context, hobby_view_context, job_view_context
 from cv.views import date_view_context
+from root.utils import divide_index
 
 register = template.Library()
 
@@ -30,12 +31,12 @@ def skills():
 
 @register.inclusion_tag('components/cv/single/school.html')
 def school(item, wow=2):
-    return school_view_context(item, divide(wow, 10))
+    return school_view_context(item, divide_index(wow, 10))
 
 
 @register.inclusion_tag('components/cv/single/job.html')
 def job(item, wow=2):
-    return job_view_context(item, divide(wow, 10))
+    return job_view_context(item, divide_index(wow, 10))
 
 
 @register.inclusion_tag('components/cv/single/hobby.html')
@@ -46,10 +47,6 @@ def hobby(item):
 @register.inclusion_tag('components/cv/single/skill.html')
 def skill(item):
     return skill_view_context(item)
-
-
-def divide(value, divide_by):
-    return float(value) / divide_by
 
 
 @register.inclusion_tag('components/cv/utils/date.html')

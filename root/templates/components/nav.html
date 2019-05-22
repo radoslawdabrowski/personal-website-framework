@@ -1,17 +1,18 @@
 {% load static from staticfiles %}
+{% load i18n %}
 <!-- ===== Navigation ===== -->
 <div class=" nav-icon">
     <nav>
         <div class="nav-wrapper">
             <ul id="nav-mobile" class="side-nav">
                 <li class="side-nav-logo">
-                    <a href="." class="center">
+                    <a href="{% url 'cv_view' %}" class="center">
                         <img src="{% static 'images/logo_black.png' %}" class="logo-image" alt="logo">
                     </a>
                 </li>
-                <li><a href="/">Resume</a></li>
+                <li><a href="{% url 'cv_view' %}">{% trans 'Resume' %}</a></li>
 {#                <li><a href="project.html">Projects</a></li>#}
-{#                <li><a href="cover-latter.html">Cover Latter</a></li>#}
+                <li><a href="{% url 'cover_main_view' %}">{% trans 'Cover Latter' %}</a></li>
 {#                <li><a href="blog.html">Blog</a></li>#}
 {#                <li><a href="contact.html">Contact</a></li>#}
             </ul>
