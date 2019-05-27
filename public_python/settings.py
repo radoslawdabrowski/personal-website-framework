@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'attributes',
     'cv',
     'cover_letter',
-    # 'blog',
+    'blog',
     # 'portfolio',
     'contact'
 ]
@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'public_python.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'mo1134_app'
+        'NAME': os.environ['database']
     }
 }
 
