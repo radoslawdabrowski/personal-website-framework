@@ -23,3 +23,5 @@
 </h3>
 
 This is theme and cms for [radoslawdabrowski.pl](https://radoslawdabrowski.pl), my personal website.
+<br><br>
+I used this project to learn [Python](https://www.python.org) and [Django Web Framework](https://www.djangoproject.com).
