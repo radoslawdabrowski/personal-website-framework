@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from cover_letter.models import Reference
+
 from root.utils import get_attribute
+from root.attributes import COVER_LETTER
 
 
 def cover_main_view(request, *args):
@@ -9,7 +11,7 @@ def cover_main_view(request, *args):
 
 def letter_view_context():
     return {
-        'letter': get_attribute("COVER_LETTER")
+        'letter': get_attribute(COVER_LETTER)
     }
 
 

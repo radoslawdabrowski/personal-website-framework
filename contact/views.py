@@ -7,6 +7,7 @@ from django.utils.translation import gettext_lazy as _
 
 from django.core.mail import send_mail
 from root.utils import get_attribute
+from root.attributes import ATTRIBUTE_EMAIL
 
 
 def contact_view(request, *args):
@@ -31,7 +32,7 @@ def send_email(request):
             'Contact Form',
             serializer.data.get('message'),
             serializer.data.get('email'),
-            [get_attribute('ATTRIBUTE_EMAIL').value],
+            [get_attribute(ATTRIBUTE_EMAIL)],
             fail_silently=True
         )
         return Response(_("Your message was sent!"), status=status.HTTP_201_CREATED)
