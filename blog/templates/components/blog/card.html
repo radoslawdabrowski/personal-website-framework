@@ -1,0 +1,16 @@
+<div class="col s12 m12 l6 blog-post">
+    <div class="thumbnail z-depth-1 animated">
+        <a href="{% url 'single_blog_view' url=item.url %}"><img src="{{ item.img }}" alt="" class="responsive-img"></a>
+        <div class="blog-details">
+            <div class="post-title" id="blog-post-{{ classItem }}">
+                <a href="{% url 'single_blog_view' url=item.url %}">
+                    <h2>{{ item.title }}</h2>
+                    <span>branding, ui-ux, article</span>
+                </a>
+            </div>
+            <div class="post-details">
+                <p>{{ item.description | safe }}</p>
+            </div>
+        </div>
+    </div>
+</div>
