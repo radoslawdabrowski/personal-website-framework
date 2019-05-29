@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-22 12:26+0200\n"
+"POT-Creation-Date: 2019-05-29 14:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,13 +19,35 @@ msgstr ""
 "100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%"
 "10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: .\contact\models.py:8
-msgid "Field 'name' is to long"
-msgstr "Pole 'nazwa' jest za długie"
+#: .\blog\models.py:25 .\contact\models.py:8
+msgid "Your name is too long"
+msgstr "Twoja nazwa jest za długa"
 
-#: .\contact\models.py:11
-msgid "Field 'email' is to long"
-msgstr "Pole 'email' jest za długie"
+#: .\blog\models.py:26 .\blog\models.py:27 .\contact\models.py:9
+#: .\contact\models.py:10
+msgid "You need to fill your name"
+msgstr "Musisz wypełnić swoją nazwę"
+
+#: .\blog\models.py:30 .\contact\models.py:13
+msgid "Your email is too long"
+msgstr "Twój email jest za długi"
+
+#: .\blog\models.py:31 .\blog\models.py:32 .\contact\models.py:14
+#: .\contact\models.py:15
+msgid "You need to fill your email"
+msgstr "Musisz wypełnić swój email"
+
+#: .\blog\models.py:35
+msgid "Your comment is too long"
+msgstr "Twój komentarz jest za długi"
+
+#: .\blog\models.py:36 .\blog\models.py:37
+msgid "You need to fill the comment"
+msgstr "Musisz wypełnić komentarz"
+
+#: .\contact\models.py:18 .\contact\models.py:19
+msgid "You need to fill the message"
+msgstr "Musisz wypełnić wiadomość"
 
 #: .\contact\templates\components\contact\data.html:7
 #: .\root\templates\components\nav.html:17
@@ -123,6 +145,10 @@ msgstr "CV"
 #: .\root\templates\components\nav.html:15
 msgid "Cover Latter"
 msgstr "List motywacyjny"
+
+#: .\root\templates\index.html:8
+msgid "en"
+msgstr "pl"
 
 #: .\root\templatetags\root_extras.py:65
 msgid "Comming back soon"
