@@ -1,7 +1,7 @@
 astroid==2.2.5
 colorama==0.4.1
 dataclasses==0.6
-Django==2.1.7
+Django==2.1.9
 djongo==1.2.31
 isort==4.3.15
 lazy-object-proxy==1.3.1
