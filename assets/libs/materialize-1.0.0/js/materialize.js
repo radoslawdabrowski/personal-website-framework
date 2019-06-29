@@ -17,7 +17,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 (function (factory) {
   window.cash = factory();
 })(function () {
-  var doc = document,
+  var doc = document,sidenav-trigger
       win = window,
       ArrayProto = Array.prototype,
       slice = ArrayProto.slice,

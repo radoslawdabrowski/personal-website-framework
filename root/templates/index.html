@@ -5,7 +5,7 @@
 <!--[if IE 7]><html class="no-js ie7 oldie" lang="en-US"> <![endif]-->
 <!--[if IE 8]><html class="no-js ie8 oldie" lang="en-US"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en">
+<html lang="{% trans 'en' %}">
 <head>
     <!-- ===== Meta Tags ===== -->
     <meta charset="utf-8">
@@ -42,6 +42,11 @@
     <![endif]-->
 </head>
 <body>
+{#<div class="container">#}
+{#    <div class="row">#}
+        <!-- ===== Navigation ===== -->
+        {% navigation %}
+{#    </div>#}
 <div class="container">
     <div class="row">
         <!-- ===== Sidebar ===== -->
@@ -53,6 +58,8 @@
                 {% block content %}
                     {{ no_content }}
                 {% endblock %}
+            </div>
+            <div class="row">
                 {% footer %}
             </div>
         </section>

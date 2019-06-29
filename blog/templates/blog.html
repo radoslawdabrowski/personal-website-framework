@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% load i18n %}
+{% load blog_extras %}
+{% block content %}
+    <div class="blog">
+        {% for postItem in posts %}
+            {% post item=postItem counter=forloop.counter %}
+        {% endfor %}
+    </div>
+    {% pagination posts=posts page=current_page %}
+{% endblock %}
