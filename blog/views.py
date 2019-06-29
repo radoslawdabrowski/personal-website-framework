@@ -8,13 +8,17 @@ from root.attributes import BLOG_ITEMS_PER_PAGE
 
 def blog_view(request, *args, **kwargs):
     blog_list = Post.objects.all().order_by('-date')
-    paginator = Paginator(blog_list, get_attribute(BLOG_ITEMS_PER_PAGE))
 
+    items_per_page = get_attribute(BLOG_ITEMS_PER_PAGE)
     page = request.GET.get('page')
+
+    if items_per_page is None or items_per_page == 'No Attribute':
+        items_per_page = 10
 
     if page is None:
         page = 1
 
+    paginator = Paginator(blog_list, items_per_page)
     posts = paginator.get_page(page)
 
     return render(request, "blog.html", {
