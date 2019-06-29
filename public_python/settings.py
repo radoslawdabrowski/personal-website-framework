@@ -144,7 +144,7 @@ MEDIA_ROOT = os.path.join(ENV_PATH, '../public/media/')
 
 ADMIN_ENABLED = True
 
-EMAIL_HOST = os.environ['py_email_host']
-EMAIL_HOST_USER = os.environ['py_email_user']
-EMAIL_HOST_PASSWORD = os.environ['py_email_password']
+EMAIL_HOST = os.environ['email_server_host']
+EMAIL_HOST_USER = os.environ['email_server_username']
+EMAIL_HOST_PASSWORD = os.environ['email_server_password']
 EMAIL_PORT = '2525'
