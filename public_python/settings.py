@@ -42,9 +42,9 @@ INSTALLED_APPS = [
     'attributes',
     'cv',
     'cover_letter',
-    # 'blog',
-    # 'portfolio',
-    # 'contact'
+    'blog',
+    'portfolio',
+    'contact'
 ]
 
 MIDDLEWARE = [
@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'public_python.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'mo1134_app'
+        'NAME': os.environ['database']
     }
 }
 
@@ -143,3 +143,8 @@ STATIC_ROOT = os.path.join(ENV_PATH, '../public/static/')
 MEDIA_ROOT = os.path.join(ENV_PATH, '../public/media/')
 
 ADMIN_ENABLED = True
+
+EMAIL_HOST = os.environ['email_server_host']
+EMAIL_HOST_USER = os.environ['email_server_username']
+EMAIL_HOST_PASSWORD = os.environ['email_server_password']
+EMAIL_PORT = '2525'

@@ -6,7 +6,8 @@ from django.db.models.base import ObjectDoesNotExist
 # getting attribute from model
 def get_attribute(name):
     try:
-        return Attribute.objects.filter(key=name).get()
+        attribute = Attribute.objects.filter(key=name).get()
+        return attribute.value
     except ObjectDoesNotExist:
         return _('No Attribute')
 

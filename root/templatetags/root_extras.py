@@ -3,9 +3,10 @@ from django.utils.translation import ugettext as _
 
 from root.views import navigation_view_context, sidebar_view_context, footer_view_context, social_view_context
 from root.views import description_view_context, mobile_view_context, email_view_context, header_view_context
-from attributes.models import Attribute, Social
 
 from root.utils import get_attribute
+from root.attributes import ATTRIBUTE_DESCRIPTION, ATTRIBUTE_EMAIL, ATTRIBUTE_JOB_POSITION, ATTRIBUTE_NAME
+from root.attributes import ATTRIBUTE_WEBSITE, ATTRIBUTE_WEBSITE_KEYWORDS, ATTRIBUTE_WEBSITE_TITLE, ATTRIBUTE_PHONE
 
 register = template.Library()
 
@@ -52,12 +53,12 @@ def email():
 
 @register.simple_tag
 def get_website_title():
-    return get_attribute('ATTRIBUTE_WEBSITE_TITLE')
+    return get_attribute(ATTRIBUTE_WEBSITE_TITLE)
 
 
 @register.simple_tag
 def get_keywords():
-    return get_attribute('ATTRIBUTE_WEBSITE_KEYWORDS')
+    return get_attribute(ATTRIBUTE_WEBSITE_KEYWORDS)
 
 
 @register.simple_tag
@@ -67,31 +68,31 @@ def get_no_content():
 
 @register.simple_tag
 def get_description():
-    return get_attribute('ATTRIBUTE_DESCRIPTION')
+    return get_attribute(ATTRIBUTE_DESCRIPTION)
 
 
 @register.simple_tag
 def get_position():
-    return get_attribute('ATTRIBUTE_JOB_POSITION')
+    return get_attribute(ATTRIBUTE_JOB_POSITION)
 
 
 @register.simple_tag
 def get_name():
-    return get_attribute('ATTRIBUTE_NAME')
+    return get_attribute(ATTRIBUTE_NAME)
 
 
 @register.simple_tag
 def get_email():
-    return get_attribute('ATTRIBUTE_EMAIL')
+    return get_attribute(ATTRIBUTE_EMAIL)
 
 
 @register.simple_tag
 def get_phone():
-    return get_attribute('ATTRIBUTE_PHONE')
+    return get_attribute(ATTRIBUTE_PHONE)
 
 
 @register.simple_tag
 def get_website():
-    return get_attribute('ATTRIBUTE_WEBSITE')
+    return get_attribute(ATTRIBUTE_WEBSITE)
 
 

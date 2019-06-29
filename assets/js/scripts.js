@@ -2,7 +2,7 @@
 // @prepros-prepend "../libs/jquery-3.3.1/jquery.min.js"
 
 // Materialize
-// @prepros-append "../libs/materialize-0.97.5/materialize.min.js"
+// @prepros-append "../libs/materialize-1.0.0/js/materialize.min.js"
 
 //WOW
 // @prepros-append "../libs/wow-1.0.3/wow.min.js"

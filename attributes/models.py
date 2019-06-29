@@ -8,6 +8,9 @@ class Attribute(models.Model):
     def __str__(self):
         return self.value
 
+    def __len__(self):
+        return len(self.value)
+
 
 class Social(models.Model):
     icon = models.TextField(null=False, blank=False)

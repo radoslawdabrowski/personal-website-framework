@@ -1,8 +1,7 @@
 from django.shortcuts import render
 
-from attributes.models import Attribute
-from .models import Hobby, Job, School, Skill
 from root.utils import split_list
+from .models import Hobby, Job, School, Skill
 
 
 def cv_view(request, *args, **kwargs):
