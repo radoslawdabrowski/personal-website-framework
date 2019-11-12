@@ -3,7 +3,7 @@
 </p>
 
 <h1>
-   radoslawdabrowski.pl
+   Personal Website Framework
    <img alt="GitHub release" src="https://img.shields.io/github/release/radoslawdabrowski/radoslawdabrowski.pl.svg?style=flat-square">
    <img alt="GitHub" src="https://img.shields.io/github/license/radoslawdabrowski/radoslawdabrowski.pl.svg?style=flat-square">
 </h1>
