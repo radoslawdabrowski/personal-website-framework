@@ -116,3 +116,4 @@ assets/libs/fontawesome*
 public/*
 
 *README.html
+*.iml
