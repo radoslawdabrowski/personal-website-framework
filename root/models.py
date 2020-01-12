@@ -19,3 +19,10 @@ class Company(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class BaseModel(models.Model):
+    objects = models.Manager()
+
+    class Meta:
+        abstract = True
