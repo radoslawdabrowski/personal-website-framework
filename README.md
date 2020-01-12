@@ -26,3 +26,4 @@ This is client application for [radoslawdabrowski.pl](https://radoslawdabrowski.
 <br><br>
 I used this project to learn [Python](https://www.python.org) and [Django Web Framework](https://www.djangoproject.com).
 
+

@@ -6,9 +6,9 @@
                 <img src="{% gravatar_for_email comment.email %}" alt="gravatar" class="responsive-img">
             </div>
             <div class="col col s12 m12 l10 comment-details">
-                <h4> Jhone doe </h4>
-                <span>Feb 29, 2015</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. consectetur adipiscing elit.</p>
+                <h4> {{ comment.name }} </h4>
+                <span>{{ comment.date }}</span>
+                <p>{{ comment.content }}</p>
             </div>
         </div>
     </div>

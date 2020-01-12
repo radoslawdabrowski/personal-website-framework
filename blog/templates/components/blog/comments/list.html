@@ -5,22 +5,25 @@
     {% comment item=commentItem %}
 {% endfor %}
 
-<div class="col s12 m12 l12 z-depth-1 comment-form" > <!-- Write comment from here -->
+<div class="col s12 m12 l12 z-depth-1 comment-form" >
     <div class="row">
-        <div class="input-field col s12 m12 l12 wow fadeIn a2" data-wow-delay="0.1s">
-            <input id="name" name="name" type="text" class="validate">
-            <label for="name">Name</label>
-        </div>
-        <div class="input-field col s12 wow fadeIn a4" data-wow-delay="0.3s">
-            <input id="email" type="email" name="email" class="validate">
-            <label for="email">Email</label>
-        </div>
-        <div class="input-field col s12 m12 l12">
-            <textarea id="textarea1" class="materialize-textarea"></textarea>
-            <label for="textarea1">Write Here</label>
-        </div>
-        <div class="input-field col s12 m12 l12">
-            <button class="btn waves-effect waves-light wow fadeIn" type="submit" name="action" data-wow-delay="0.5s">Comment</button>
-        </div>
+        <form role="form" id="commentForm" data-toggle="validator">
+            <div id="msgSubmit" class="h3 text-center hidden"></div>
+            <div class="input-field col s12 m12 l12 wow fadeIn a2" data-wow-delay="0.1s">
+                <input id="name" name="name" type="text" class="validate">
+                <label for="name">{% trans 'Name' %} *</label>
+            </div>
+            <div class="input-field col s12 wow fadeIn a4" data-wow-delay="0.3s">
+                <input id="email" type="email" name="email" class="validate">
+                <label for="email">{% trans 'Email' %} *</label>
+            </div>
+            <div class="input-field col s12 m12 l12">
+                <textarea id="content" class="materialize-textarea"></textarea>
+                <label for="content">{% trans 'Write Here' %} *</label>
+            </div>
+            <div class="input-field col s12 m12 l12">
+                <button class="btn waves-effect waves-light wow fadeIn" type="submit" name="action" data-wow-delay="0.5s">{% trans 'Comment' %}</button>
+            </div>
+        </form>
     </div>
 </div>

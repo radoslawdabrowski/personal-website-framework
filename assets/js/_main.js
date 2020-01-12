@@ -16,26 +16,13 @@ $(document).ready(function () {
         return cookieValue;
     }
 
-    /***************************************************************************/
-    /* NAVIGATION  */
-    /***************************************************************************/
     $('.sidenav').sidenav();
-
-    /**************************************************************************
-     SKILL BAR
-     **************************************************************************/
-
     $(".determinate").each(function () {
         let width = $(this).text();
         $(this).css("width", width)
             .empty()
             .append('<i class="fa fa-circle"></i>');
     });
-
-
-    /**************************************************************************
-     BLOG POST
-     **************************************************************************/
 
     jQuery(window).on("load", function () {
         let $ = jQuery;
@@ -46,95 +33,131 @@ $(document).ready(function () {
         });
     });
 
-
     let height = $(".caption").height();
     if ($(window).width()) {
         $("#featured").css("height", height);
         $("#featured img").css("height", height);
     }
 
-
-    /*************************************************************************
-     TOOLTIP
-     **************************************************************************/
     $(".tooltipped").tooltip({delay: 50});
 
-    /**************************************************************************
-     WOW INIT
-     **************************************************************************/
     const wow = new WOW({mobile: false});
     wow.init();
 
-    function submitMSG(valid, msg) {
+    function post(url, data = {}, success = () => {}, error = () => {}) {
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: data,
+            dataType: 'json',
+            headers: {
+                "X-CSRFToken": getCookie("csrftoken")
+            },
+            success: success,
+            error: error
+        });
+    }
+
+    function handleError(item, errors) {
+        $(item)
+            .removeClass()
+            .addClass("shake animated")
+            .one(
+                "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+                function () {
+                    $(this).removeClass();
+                }
+            );
+        if (errors !== undefined && errors !== null) {
+            errors.responseJSON.forEach(error => {
+                submitMessage(false, error[0])
+            })
+        }
+    }
+
+    function handleSuccess(item, message) {
+        $(item)[0].reset();
+        submitMessage(true, message)
+    }
+
+    function submitMessage(valid, message) {
         let msgClasses;
         if (valid) {
             msgClasses = "h3 text-center fadeInUp animated text-success";
         } else {
             msgClasses = "h3 text-center text-danger";
         }
-        $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+        $("#msgSubmit").removeClass().addClass(msgClasses).text(message);
     }
 
-    /***************************************************************************
-     CONTACT FORM
-     ***************************************************************************/
-    function formSuccess(message) {
-        $("#contactForm")[0].reset();
-        submitMSG(true, message)
+    function validate(item,event) {
+        if (event.isDefaultPrevented()) {
+            handleError(item);
+            submitMessage(false, "Did you fill in the form properly?");
+            return false;
+        }
+        return true;
     }
 
-    function formError() {
-        $("#contactForm").removeClass().addClass("shake animated").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-            function () {
-                $(this).removeClass();
-            });
+    $("#commentForm").validator().on("submit", function (event) {
+        if (validate("#commentForm", event)) {
+            event.preventDefault();
+            addComment();
+        }
+    });
+
+    $("#contactForm").validator().on("submit", function (event) {
+        if (validate("#contactForm", event)) {
+            event.preventDefault();
+            sendContactForm();
+        }
+    });
+
+    function addComment() {
+        let name = $("#name").val();
+        let email = $("#email").val();
+        let content = $("#content").val();
+        let form = "#commentForm";
+
+        post(
+            "/blog/publish/",
+            {
+                "name": name,
+                "email": email,
+                "content": content
+            },
+            (data) => {
+                handleSuccess(form, data)
+            },
+            (errors) => {
+                handleError(form)
+
+            }
+        )
     }
 
-    function submitForm() {
-        // Initiate Variables With Form Content
+    function sendContactForm() {
         let name = $("#name").val();
         let email = $("#email").val();
         let message = $("#message").val();
+        let form = "#contactForm";
 
-        $.ajax({
-            type: "POST",
-            url: "/contact/send/",
-            data: {
+        post(
+            "/contact/send/",
+            {
                 "name": name,
                 "email": email,
                 "message": message
             },
-            dataType: 'json',
-            headers: {
-                "X-CSRFToken": getCookie("csrftoken")
+            (data) => {
+                handleSuccess(form, data)
             },
-            success: function (text) {
-                formSuccess(text);
-            },
-            error: function (errors) {
-                formError();
-                errors.responseJSON.forEach(error => {
-                    submitMSG(false, error[0])
-                })
+            (errors) => {
+                handleError(form)
             }
-        });
+        );
     }
 
-    $("#contactForm").validator().on("submit", function (event) {
-        if (event.isDefaultPrevented()) {
-            // handle the invalid form...
-            formError();
-            submitMSG(false, "Did you fill in the form properly?");
-        } else {
-            // everything looks good!
-            event.preventDefault();
-            submitForm();
-        }
-    });
-
-    /**************************************************************************
-     Projects
-     **************************************************************************/
     // $("#portfolio-item").mixItUp();
 
     $(".sa-view-project-detail").on("click", function (event) {
@@ -188,10 +211,6 @@ $(document).ready(function () {
     });
 
 });
-
-/***************************************************************************
- MAP
- ***************************************************************************/
 
 google.maps.event.addDomListener(window, "load", init);
 
