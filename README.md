@@ -11,11 +11,11 @@
     <a href="https://travis-ci.org/radoslawdabrowski/personal-website-framework" alt="Travis CI">
         <img src="https://img.shields.io/travis/radoslawdabrowski/personal-website-framework.svg?style=flat-square&logo=travis-ci" />
     </a>
-    <a href="https://www.codacy.com/app/radoslawdabrowski/personal-website-framework?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=radoslawdabrowski/personal-website-framework&amp;utm_campaign=Badge_Coverage">           
+    <a href="https://www.codacy.com/manual/radoslawdabrowski/personal-website-framework?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=radoslawdabrowski/personal-website-framework&amp;utm_campaign=Badge_Grade">           
         <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/778cd998867c4743b0df2729ddc9ee19?style=flat-square&logo=codacy">
     </a>
-    <a href="">
-        <img alt="Codacy coverage" src="https://img.shields.io/codacy/coverage/6cf16f236351425bb615a98b2efc3012?style=flat-square&logo=codacy">
+    <a href="https://www.codacy.com/manual/radoslawdabrowski/personal-website-framework?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=radoslawdabrowski/personal-website-framework&amp;utm_campaign=Badge_Coverage">
+        <img alt="Codacy coverage" src="https://img.shields.io/codacy/coverage/778cd998867c4743b0df2729ddc9ee19?style=flat-square&logo=codacy">
     </a>
     <a href="https://radoslawdabrowski.pl" alt="Website">
         <img src="https://img.shields.io/website/https/radoslawdabrowski.pl.svg?style=flat-square&up_message=online" />
