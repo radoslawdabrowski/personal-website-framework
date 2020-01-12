@@ -1,27 +1,33 @@
 from django.db import models
-from root.models import DEFAULT_ID
+from root.models import DEFAULT_ID, BaseModel
 from django.utils.translation import gettext_lazy as _
 import datetime
 
 
 # Post entity
-class Post(models.Model):
+class Post(BaseModel):
     title = models.CharField(null=False, blank=False, default='ERROR', max_length=255)
     url = models.CharField(null=False, blank=False, default='ERROR', max_length=255)
-    img = models.FileField(null=True, blank=True)
+    img = models.ImageField(null=True, blank=True)
     content = models.TextField(null=False, blank=True)
     description = models.TextField(null=False, blank=False, default='ERROR', max_length=511)
     date = models.DateField(default=datetime.date.today)
 
+    def __str__(self):
+        return self.url
+
 
 # Tag dictionary
-class Tag(models.Model):
+class Tag(BaseModel):
     name = models.CharField(null=False, blank=False, default='ERROR', max_length=30)
-    post = models.ForeignKey(Post, on_delete=models.DO_NOTHING, default=DEFAULT_ID)
+    posts = models.ManyToManyField(Post)
+
+    def __str__(self):
+        return self.name
 
 
 # Comment entity
-class Comment(models.Model):
+class Comment(BaseModel):
     name = models.TextField(null=False, blank=False, default='NO_NAME', max_length=50, error_messages={
         'max_length': _("Your name is too long"),
         'blank': _("You need to fill your name"),

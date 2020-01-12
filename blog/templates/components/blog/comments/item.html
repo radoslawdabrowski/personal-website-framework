@@ -1,0 +1,15 @@
+{% load gravatar %}
+<div class="col s12 m12 l12 comment right" >
+    <div class="row">
+        <div class="section-wrapper z-depth-1 wow fadeIn" data-wow-delay="0.1s">
+            <div class="col s12 m12 l2 comment-img">
+                <img src="{% gravatar_for_email comment.email %}" alt="gravatar" class="responsive-img">
+            </div>
+            <div class="col col s12 m12 l10 comment-details">
+                <h4> Jhone doe </h4>
+                <span>Feb 29, 2015</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+</div>

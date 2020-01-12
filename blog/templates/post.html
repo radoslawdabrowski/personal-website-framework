@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% load i18n %}
+{% load blog_extras %}
+{% block content %}
+    <div class="blog"> <!-- full Blog start -->
+        <div class="col s12 m12 l12 blog-post">
+            <div class="thumbnail z-depth-1 animated">
+                <img src="{{ img_url }}" alt="" class="responsive-img">
+                <div class="blog-details">
+                    <div class="post-title" id="blog-post-1">
+                        <a href="{% url 'single_blog_view' url=item.url %}">
+                            <h2>{{ item.title }}</h2>
+                            <span>{{ tags }}</span>
+                        </a>
+                    </div>
+                    <div class="post-details">
+                        {{ item.content | safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end  post -->
+    {% comments post_item=item %}
+{% endblock %}
