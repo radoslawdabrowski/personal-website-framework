@@ -1,6 +1,11 @@
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from django.db.models.base import ObjectDoesNotExist
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from blog.serializers import CommentSerializer
+from django.utils.translation import gettext_lazy as _
 
 from blog.models import Post, Comment
 from root.utils import get_attribute
@@ -70,3 +75,13 @@ def comment_view_content(comment):
     return {
         'comment': comment
     }
+
+
+# Api endpoint
+@api_view(['POST'])
+def publish_comment(request):
+    serializer = CommentSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(_("Your comment was added and waiting for accept!"), status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
