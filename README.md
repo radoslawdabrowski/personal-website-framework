@@ -8,8 +8,8 @@
    <img alt="GitHub" src="https://img.shields.io/github/license/radoslawdabrowski/personal-website-framework.svg?style=flat-square">
 </h1>
 <div>
-    <a href="https://travis-ci.org/radoslawdabrowski/personal-website-framework" alt="Travis CI">
-        <img src="https://img.shields.io/travis/radoslawdabrowski/personal-website-framework.svg?style=flat-square&logo=travis-ci" />
+    <a href="https://circleci.com/gh/radoslawdabrowski/personal-website-framework" alt="Circle CI">
+        <img alt="CircleCI" src="https://img.shields.io/circleci/build/github/radoslawdabrowski/personal-website-framework?logo=circleci&style=flat-square">
     </a>
     <a href="https://www.codacy.com/manual/radoslawdabrowski/personal-website-framework?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=radoslawdabrowski/personal-website-framework&amp;utm_campaign=Badge_Grade">           
         <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/778cd998867c4743b0df2729ddc9ee19?style=flat-square&logo=codacy">
