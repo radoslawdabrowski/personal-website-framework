@@ -8,7 +8,7 @@
    <img alt="GitHub" src="https://img.shields.io/github/license/radoslawdabrowski/personal-website-framework.svg?style=flat-square">
 </h1>
 <div>
-    <a href="https://travis-ci.org/radoslawdabrowski/personal-website-framework" alt="Travis CI">
+    <a href="https://travis-ci.com/radoslawdabrowski/personal-website-framework" alt="Travis CI">
         <img src="https://img.shields.io/travis/radoslawdabrowski/personal-website-framework.svg?style=flat-square&logo=travis-ci" />
     </a>
     <a href="https://www.codacy.com/manual/radoslawdabrowski/personal-website-framework?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=radoslawdabrowski/personal-website-framework&amp;utm_campaign=Badge_Grade">           
