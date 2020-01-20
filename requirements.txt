@@ -28,7 +28,7 @@ pyparsing==2.4.0
 pytz==2019.1
 requests==2.22.0
 scss==0.8.73
-six==1.12.0
+six==1.14.0
 sqlparse==0.2.4
 terminaltables==3.1.0
 typed-ast==1.3.5
