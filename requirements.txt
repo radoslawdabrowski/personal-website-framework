@@ -22,7 +22,7 @@ mccabe==0.6.1
 packaging==19.0
 Pillow==7.0.0
 pip-upgrader==1.4.12
-pylint==2.3.1
+pylint==2.5.2
 pymongo==3.10.1
 pyparsing==2.4.0
 pytz==2019.1
