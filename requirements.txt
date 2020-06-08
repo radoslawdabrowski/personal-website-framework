@@ -1,7 +1,7 @@
 aadict==0.2.3
 asset==0.6.13
 astroid==2.2.5
-certifi==2019.3.9
+certifi==2020.4.5.2
 chardet==3.0.4
 colorama==0.4.1
 colorclass==2.2.0
