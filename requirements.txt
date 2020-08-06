@@ -10,7 +10,7 @@ dataclasses==0.6
 Django==2.2.8
 django-appconf==1.0.3
 django-avatar==5.0.0
-djangorestframework==3.9.4
+djangorestframework==3.11.1
 djongo==1.2.32
 docopt==0.6.2
 globre==0.1.5
