@@ -19,7 +19,7 @@ idna==2.8
 lazy-object-proxy==1.5.1
 isort==5.5.4
 mccabe==0.6.1
-packaging==19.0
+packaging==20.4
 Pillow==7.0.0
 pip-upgrader==1.4.12
 pylint==2.6.0
