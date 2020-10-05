@@ -85,7 +85,11 @@ WSGI_APPLICATION = 'public_python.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': os.environ['database_name']
+        'NAME': os.environ['database_name'],
+	'CLIENT': {
+	    'host': os.environ['database_host']
+	    'port': int(os.environ['database_port']);
+	}
     }
 }
 
