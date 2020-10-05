@@ -86,10 +86,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': os.environ['database_name'],
-	'CLIENT': {
-	    'host': os.environ['database_host']
-	    'port': int(os.environ['database_port']);
-	}
+        'CLIENT': {
+            'host': os.environ['database_host'],
+            'port': int(os.environ['database_port'])
+        }
     }
 }
 

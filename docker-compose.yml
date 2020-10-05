@@ -1,11 +1,11 @@
 version: "3.8"
 
 services:
-  db:
+  mongodb:
     image: mongo
     container_name: mongodb
   web:
-    build: .
+    image: app
     command: python manage.py runserver 0.0.0.0:8000
     container_name: personal-website
     volumes:
@@ -15,7 +15,27 @@ services:
     env_file:
       - .env
     depends_on:
-      - db
+      - mongodb
+  migration:
+    build: .
+    image: app
+    command: python manage.py migrate
+    volumes:
+      - .:/django_mongodb_docker
+    links:
+      - mongodb
+    depends_on:
+      - make_migrations
+  make_migrations:
+    build: .
+    image: app
+    command: python manage.py makemigrations
+    volumes:
+      - .:/django_mongodb_docker
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
 networks:
   default:
     external:

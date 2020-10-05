@@ -1,15 +1,23 @@
-{% load static from staticfiles %}
+{% load static %}
 {% load i18n %}
+{% load root_extras %}
+
+{% is_page_visible 'cv_view' as cv_view_visible %}
+{% is_page_visible 'projects_view' as projects_visible %}
+{% is_page_visible 'cover_main_view' as cover_visible %}
+{% is_page_visible 'blog_view' as blog_visible %}
+{% is_page_visible 'contact_view' as contact_visible %}
+
 <nav>
     <div class="nav-wrapper">
         <a href="#!" class="brand-logo">Logo</a>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="far fa-bars"></i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="{% url 'cv_view' %}">{% trans 'Resume' %}</a></li>
-{#            <li><a href="project.html">Projects</a></li>#}
-            <li><a href="{% url 'cover_main_view' %}">{% trans 'Cover Latter' %}</a></li>
-            <li><a href="{% url 'blog_view' %}">Blog</a></li>
-            <li><a href="{% url 'contact_view' %}">{% trans 'Contact' %}</a></li>
+            {% if cv_view_visible %}<li><a href="{% url 'cv_view' %}">{% trans 'Resume' %}</a></li>{% endif %}
+            {% if projects_visible %}<li><a href="{% url 'projects_view' %}">{% trans 'Projects' %}</a></li>{% endif %}
+            {% if cover_visible %}<li><a href="{% url 'cover_main_view' %}">{% trans 'Cover Latter' %}</a></li>{% endif %}
+            {% if blog_visible %}<li><a href="{% url 'blog_view' %}">{% trans 'Blog' %}</a></li>{% endif %}
+            {% if contact_visible %}<li><a href="{% url 'contact_view' %}">{% trans 'Contact' %}</a></li>{% endif %}
         </ul>
     </div>
 </nav>
@@ -20,10 +28,10 @@
             <img src="{% static 'images/logo_black.png' %}" class="logo-image" alt="logo">
         </a>
     </li>
-    <li><a href="{% url 'cv_view' %}">{% trans 'Resume' %}</a></li>
-    {#    <li><a href="project.html">Projects</a></li>#}
-    <li><a href="{% url 'cover_main_view' %}">{% trans 'Cover Latter' %}</a></li>
-    <li><a href="{% url 'blog_view' %}">Blog</a></li>
-    <li><a href="{% url 'contact_view' %}">{% trans 'Contact' %}</a></li>
+    {% if cv_view_visible %}<li><a href="{% url 'cv_view' %}">{% trans 'Resume' %}</a></li>{% endif %}
+    {% if projects_visible %}<li><a href="{% url 'projects_view' %}">{% trans 'Projects' %}</a></li>{% endif %}
+    {% if cover_visible %}<li><a href="{% url 'cover_main_view' %}">{% trans 'Cover Latter' %}</a></li>{% endif %}
+    {% if blog_visible %}<li><a href="{% url 'blog_view' %}">{% trans 'Blog' %}</a></li>{% endif %}
+    {% if contact_visible %}<li><a href="{% url 'contact_view' %}">{% trans 'Contact' %}</a></li>{% endif %}
 </ul>
 

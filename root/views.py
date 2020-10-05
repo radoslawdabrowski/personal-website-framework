@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from attributes.models import Social
+from attributes.models import Social, Page
 
 
 def navigation_view_context():
@@ -35,3 +35,12 @@ def email_view_context():
 
 def header_view_context():
     return {}
+
+
+def should_page_be_visible(page):
+    is_visible = False
+    try:
+        is_visible = Page.objects.filter(key=page)[0].value
+    except IndexError:
+        return is_visible
+    return is_visible

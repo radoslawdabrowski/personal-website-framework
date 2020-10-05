@@ -3,7 +3,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 import datetime
 
 from root.models import DEFAULT_ID
-from root.models import Company
+from attributes.models import Company
 
 
 class Reference(models.Model):
