@@ -5,8 +5,8 @@ services:
     image: mongo
     container_name: mongodb
   web:
-    image: app
-    command: python manage.py runserver 0.0.0.0:8000
+    build: .
+    command: python manage.py makemessages && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000
     container_name: personal-website
     volumes:
       - .:/code
@@ -14,26 +14,6 @@ services:
       - "8000:8000"
     env_file:
       - .env
-    depends_on:
-      - mongodb
-  migration:
-    build: .
-    image: app
-    command: python manage.py migrate
-    volumes:
-      - .:/django_mongodb_docker
-    links:
-      - mongodb
-    depends_on:
-      - make_migrations
-  make_migrations:
-    build: .
-    image: app
-    command: python manage.py makemigrations
-    volumes:
-      - .:/django_mongodb_docker
-    links:
-      - mongodb
     depends_on:
       - mongodb
 networks:
