@@ -8,7 +8,7 @@ colorclass==2.2.0
 coverage==4.5.3
 dataclasses==0.6
 Django==2.2.8
-django-appconf==1.0.3
+django-appconf==1.0.4
 django-avatar==5.0.0
 djangorestframework==3.9.4
 djongo==1.2.32
