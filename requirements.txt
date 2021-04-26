@@ -1,6 +1,6 @@
 aadict==0.2.3
 asset==0.6.13
-astroid==2.2.5
+astroid==2.5.6
 certifi==2019.3.9
 chardet==3.0.4
 colorama==0.4.1
