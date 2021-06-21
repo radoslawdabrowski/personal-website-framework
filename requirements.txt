@@ -32,5 +32,5 @@ six==1.15.0
 sqlparse==0.2.4
 terminaltables==3.1.0
 typed-ast==1.3.5
-urllib3==1.25.2
+urllib3==1.25.9
 wrapt==1.11.1
