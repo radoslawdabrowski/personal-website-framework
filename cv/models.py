@@ -3,7 +3,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 import datetime
 
 from root.models import DEFAULT_ID
-from root.models import SkillCategory, Company
+from attributes.models import SkillCategory, Company
 
 
 # Hobby entity
@@ -42,7 +42,7 @@ class Job(models.Model):
 
 # School entity
 class School(models.Model):
-    direction = models.CharField(null=False, blank=False, default='ERROR', max_length=100)
+    direction = models.CharField(null=False, blank=False, default='ERROR', max_length=50)
     school = models.ForeignKey(Company, on_delete=models.DO_NOTHING, default=DEFAULT_ID)
     start_date = models.DateField(null=False, blank=False, default=datetime.date.today)
     end_date = models.DateField(null=True, blank=True)
