@@ -23,6 +23,7 @@ urlpatterns = [
     path("cover-letter/", include('cover_letter.urls')),
     path("contact/", include("contact.urls")),
     path("blog/", include("blog.urls")),
+    path("projects/", include("portfolio.urls")),
     *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 ]
 

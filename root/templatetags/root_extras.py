@@ -3,12 +3,14 @@ from django.utils.translation import ugettext as _
 
 from root.views import navigation_view_context, sidebar_view_context, footer_view_context, social_view_context
 from root.views import description_view_context, mobile_view_context, email_view_context, header_view_context
+from root.views import should_page_be_visible
 
 from root.utils import get_attribute
 from root.attributes import ATTRIBUTE_DESCRIPTION, ATTRIBUTE_EMAIL, ATTRIBUTE_JOB_POSITION, ATTRIBUTE_NAME
 from root.attributes import ATTRIBUTE_WEBSITE, ATTRIBUTE_WEBSITE_KEYWORDS, ATTRIBUTE_WEBSITE_TITLE, ATTRIBUTE_PHONE
 
 register = template.Library()
+
 
 
 @register.inclusion_tag('components/nav.html')
@@ -95,4 +97,8 @@ def get_phone():
 def get_website():
     return get_attribute(ATTRIBUTE_WEBSITE)
 
+
+@register.simple_tag
+def is_page_visible(page):
+    return should_page_be_visible(page)
 
